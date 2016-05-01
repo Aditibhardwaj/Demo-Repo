@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_COUNTRY</field>
+    </columns>
+    <description>Looks for non recognized states for US an CAN shipping addresses</description>
+    <filter>
+        <booleanFilter>(1 AND 2) or (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <column>ADDRESS2_STATE</column>
+            <operator>notEqual</operator>
+            <value>AL,AK,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,MD,MA,MI,MN,MS,MO,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_COUNTRY</column>
+            <operator>equals</operator>
+            <value>USA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_STATE</column>
+            <operator>notEqual</operator>
+            <value>AB,BC,MB,NB,NL,NT,NS,NU,ON,PE,QC,SK,YT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_COUNTRY</column>
+            <operator>equals</operator>
+            <value>CAN</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ADDRESS2_STATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>QC: Invalid Shipping State</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

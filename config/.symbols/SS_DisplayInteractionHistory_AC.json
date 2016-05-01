@@ -1,0 +1,360 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "contactIntractionHistoryList", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 48, 
+                "line": 12
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "contactId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 13
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [
+        {
+            "properties": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "type", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 102
+                    }, 
+                    "type": "String"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "interactionDate", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 17, 
+                        "line": 103
+                    }, 
+                    "type": "Date"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "author", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 104
+                    }, 
+                    "type": "String"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "purpose", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 105
+                    }, 
+                    "type": "String"
+                }
+            ], 
+            "externalReferences": [], 
+            "innerClasses": [], 
+            "interfaces": [
+                "System.Comparable"
+            ], 
+            "constructors": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "DisplayInteractionHistoryWrapper", 
+                    "parameters": [
+                        {
+                            "type": "String", 
+                            "name": "type"
+                        }, 
+                        {
+                            "type": "Date", 
+                            "name": "interactionDate"
+                        }, 
+                        {
+                            "type": "String", 
+                            "name": "author"
+                        }, 
+                        {
+                            "type": "String", 
+                            "name": "purpose"
+                        }
+                    ], 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 12, 
+                        "line": 109
+                    }, 
+                    "type": null
+                }
+            ], 
+            "namespace": null, 
+            "name": "DisplayInteractionHistoryWrapper", 
+            "tableDeclaration": {
+                "type": "DisplayInteractionHistoryWrapper", 
+                "modifiers": [
+                    "public"
+                ], 
+                "references": [], 
+                "location": {
+                    "column": 16, 
+                    "line": 100
+                }, 
+                "name": "DisplayInteractionHistoryWrapper"
+            }, 
+            "key": null, 
+            "variables": [
+                {
+                    "type": "String", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 52, 
+                        "line": 109
+                    }, 
+                    "name": "type"
+                }, 
+                {
+                    "type": "Date", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 29, 
+                        "line": 110
+                    }, 
+                    "name": "interactionDate"
+                }, 
+                {
+                    "type": "String", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 31, 
+                        "line": 111
+                    }, 
+                    "name": "author"
+                }, 
+                {
+                    "type": "String", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 31, 
+                        "line": 112
+                    }, 
+                    "name": "purpose"
+                }, 
+                {
+                    "type": "Object", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 38, 
+                        "line": 121
+                    }, 
+                    "name": "objToCompare"
+                }
+            ], 
+            "id": null, 
+            "methods": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "compareTo", 
+                    "parameters": [
+                        {
+                            "type": "Object", 
+                            "name": "objToCompare"
+                        }
+                    ], 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 21, 
+                        "line": 121
+                    }, 
+                    "returnType": "Integer", 
+                    "type": null
+                }
+            ]
+        }
+    ], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "SS_DisplayInteractionHistory_AC", 
+            "parameters": [
+                {
+                    "type": "StandardController", 
+                    "name": "stdController"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 17
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "SS_DisplayInteractionHistory_AC", 
+    "tableDeclaration": {
+        "type": "SS_DisplayInteractionHistory_AC", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 9
+        }, 
+        "name": "SS_DisplayInteractionHistory_AC"
+    }, 
+    "key": "01p630000004tT6AAI", 
+    "variables": [
+        {
+            "type": "StandardController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 71, 
+                "line": 17
+            }, 
+            "name": "stdController"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 29
+            }, 
+            "name": "contactId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 31
+            }, 
+            "name": "tempHistoryList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 34
+            }, 
+            "name": "contactReportList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 35
+            }, 
+            "name": "logACallActivityList"
+        }, 
+        {
+            "type": "Contact_Report__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 61
+            }, 
+            "name": "temp"
+        }, 
+        {
+            "type": "Task", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 71
+            }, 
+            "name": "temp"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 85
+            }, 
+            "name": "index"
+        }
+    ], 
+    "id": "01p630000004tT6AAI", 
+    "methods": [
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "populateInteractionHistory", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "contactId"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 28
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }
+    ]
+}

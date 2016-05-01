@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_TYPE</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <description>Lists the top 10 membership campaigns for the current fiscal year</description>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <operator>equals</operator>
+            <value>THIS_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.rC_Giving__Campaign_Type__c</column>
+            <operator>equals</operator>
+            <value>Annual Membership</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Membership: Top 10 Campaigns of the Year</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <rowLimit>10</rowLimit>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>AMOUNT_WON</sortColumn>
+    <sortOrder>Desc</sortOrder>
+</Report>

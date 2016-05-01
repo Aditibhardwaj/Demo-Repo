@@ -1,0 +1,401 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "INSIDE_CONTACT", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 12
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "INSIDE_HOUSEHOLD", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 13
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "NAME_CONTACT", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 14
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "OUTSIDE_CONTACT", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 15
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "OUTSIDE_HOUSEHOLD", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 16
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "OUTSIDE_ORGANIZATION", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 17
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "PUBLICATION_CONTACT", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 18
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "PUBLICATION_ORGANIZATION", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 19
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "ORGANIZATION_PREF_MAIL_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 22
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "ORGANIZATION_PUBLICATION_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 23
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "FORMAL_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 24
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "PREF_MAIL_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 25
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "PUBLICATION_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 26
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_STACKED_PREF_MAIL_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 27
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_PREF_MAIL_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 28
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_FORMAL", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 29
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_FIRST_NAME", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 30
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_STANDARD_INFORMAL", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 31
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "STANDARD_INFORMAL", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 32
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "PREF_MAIL_NAME_LONG", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 35
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_STACKED_PREF_MAIL_NAME_LONG", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 37
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "HOUSEHOLD_PREF_MAIL_NAME_LONG", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 38
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "CALL", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 42
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "COMPLETED", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 43
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "CONSTITUENT_TYPE", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 48
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "SalutationConstants", 
+    "tableDeclaration": {
+        "type": "SalutationConstants", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "SalutationConstants"
+    }, 
+    "key": "01p63000000D2fgAAC", 
+    "variables": [], 
+    "id": "01p63000000D2fgAAC", 
+    "methods": []
+}

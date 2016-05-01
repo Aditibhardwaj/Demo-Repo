@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ManagerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>rC_Education__Is_Processed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates that User record is processed by &apos;User_InactivateRelationshipsBatchable&apos; batch job if set to true.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that User record is processed by &apos;User_InactivateRelationshipsBatchable&apos; batch job if set to true.</inlineHelpText>
+        <label>Is_Processed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Current_Year_Recognition_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Dollar value of gifts on User where Recognition Credits were received for the current calendar year starting January 1.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Dollar value of gifts on User where Recognition Credits were received for the current calendar year starting January 1.</inlineHelpText>
+        <label>Current Year Recognition Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Current_Year_Recognition_Credit_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of gifts on User where Recognition Credits were received for the current calendar year starting January 1.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of gifts on User where Recognition Credits were received for the current calendar year starting January 1.</inlineHelpText>
+        <label>Current Year Recognition Credit Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__First_Recognition_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of first Recognition Credit received on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of first Recognition Credit received on User.</inlineHelpText>
+        <label>First Recognition Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__First_Recognition_Credit_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date first Recognition Credit received on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date first Recognition Credit received on User.</inlineHelpText>
+        <label>First Recognition Credit Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Largest_Recognition_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of largest Recognition Credit received on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of largest Recognition Credit received on User.</inlineHelpText>
+        <label>Largest Recognition Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Largest_Recognition_Credit_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date largest Recognition Credit received on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date largest Recognition Credit received on User.</inlineHelpText>
+        <label>Largest Recognition Credit Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Last_Recognition_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of last Recognition Credit received on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of last Recognition Credit received on User.</inlineHelpText>
+        <label>Last Recognition Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Last_Recognition_Credit_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date last Recognition Credit received on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date last Recognition Credit received on User.</inlineHelpText>
+        <label>Last Recognition Credit Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Lifetime_Recognition_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total dollar value of Recognition Credits this User has received.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total dollar value of Recognition Credits this User has received.</inlineHelpText>
+        <label>Lifetime Recognition Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Lifetime_Recognition_Credit_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total number of gifts where this User has received Recognition Credits.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of gifts where this User has received Recognition Credits.</inlineHelpText>
+        <label>Lifetime Recognition Credit Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Prior_Year_Recognition_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Dollar value of gifts on User where Recognition Credits were received during the immediately prior calendar year.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Dollar value of gifts on User where Recognition Credits were received during the immediately prior calendar year.</inlineHelpText>
+        <label>Prior Year Recognition Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Prior_Year_Recognition_Credit_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of gifts on User where Recognition Credits were received during the immediately prior calendar year.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of gifts on User where Recognition Credits were received during the immediately prior calendar year.</inlineHelpText>
+        <label>Prior Year Recognition Credit Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Rollup_Recognition_Credits_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Status of Recognition Credit information on User. Status of &apos;Ok&apos; means data is up to date.</description>
+        <externalId>false</externalId>
+        <formula>IF(NOT(rC_Giving__Track_Recognition_Credits__c), &apos;Not Enabled&apos;, IF(ISBLANK(rC_Giving__Rollup_Recognition_Credits__c), &apos;Pending Refresh&apos;, &apos;Ok&apos;))</formula>
+        <inlineHelpText>Status of Recognition Credit information on User. Status of &apos;Ok&apos; means data is up to date.</inlineHelpText>
+        <label>Rollup Recognition Credits Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Rollup_Recognition_Credits__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Populated by trigger, indicates the date and time from the most recently updated Recognition Credit record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the date and time from the most recently updated Recognition Credit record.</inlineHelpText>
+        <label>Rollup Recognition Credits</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>rC_Giving__Track_Recognition_Credits__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Track and display Recognition Credit information on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Track and display Recognition Credit information on User.</inlineHelpText>
+        <label>Track Recognition Credits?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>ActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CREATED_BY_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Users</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>AdminUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>SUPER_Users</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <columns>CREATED_BY_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.USERNAME</field>
+            <operation>contains</operation>
+            <value>stanford.edu.dev1</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.TITLE</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>SUPER Users</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Test_Users</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.TITLE</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <columns>CREATED_BY_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.USERNAME</field>
+            <operation>contains</operation>
+            <value>stanford.edu.dev1</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.TITLE</field>
+            <operation>contains</operation>
+            <value>test</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Test Users</label>
+        <language>en_US</language>
+    </listViews>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.EXTENSION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.CELL</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rC_Education__Team__c$Name</field>
+    </columns>
+    <columns>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Bios__Role_1__c</field>
+    </columns>
+    <columns>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$Assignment_Reason__c</field>
+    </columns>
+    <columns>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Bios__Starting_Month__c</field>
+    </columns>
+    <columns>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Bios__Starting_Year__c</field>
+    </columns>
+    <description>Show the active teams with users and roles</description>
+    <filter>
+        <booleanFilter>(((1 OR 2) AND 3) AND 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>rC_Education__Team__c$rC_Education__Account__c.Id</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>rC_Education__Team__c$rC_Education__Contact__c.Id</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Bios__Category__c</column>
+            <operator>equals</operator>
+            <value>Team Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>rC_Education__Team__c$rC_Education__Active__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>rC_Education__Team__c$RecordType</column>
+            <operator>equals</operator>
+            <value>rC_Education__Team__c.rC_Education__Account_Team,rC_Education__Team__c.rC_Education__Contact_Team</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Education__User__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ADAPT Active Team Member Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Teams_and_Team_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>rC_Education__Team__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

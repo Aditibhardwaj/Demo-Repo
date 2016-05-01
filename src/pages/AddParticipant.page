@@ -1,0 +1,68 @@
+<!-- T-480623     -->
+<apex:page standardController="Contact_Report__c" extensions="AddParticipantController" sideBar="false" showHeader="{!1==2}">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  
+  <apex:includeScript value="{!URLFOR($Resource.JqueryResources, 'JqueryResources/bootstrap.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.JqueryResources, 'JqueryResources/jquery.min.js')}"/>
+  <apex:Stylesheet value="{!URLFOR($Resource.StyleSheet)}"/>
+
+<style>
+   .lookupInput img  {
+        position: relative;
+        top: -26px;
+        float: right;
+   }
+  .lookupInput > input {
+
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+  }
+</style>
+
+<div class="container">
+<apex:form id="frm" styleClass="form-horizontal">
+  <apex:actionFunction name="changeUserType" rerender="frm" />
+
+<apex:pageMessages id="err"/>
+
+     <apex:repeat value="{!teamMemberList}" var="teamMember">
+
+      <div class="form-group">
+		    <div class="control-label col-sm-6">
+		      <label for="type" style="float: left;">Type:</label>
+          <apex:inputField value="{!teamMember.rC_Education__Team_Member__c}" onChange="changeUserType();" styleClass="form-control"/>
+		    </div>
+	      <div class="control-label col-sm-6">
+	         <label for="member" style="float: left;">Member:</label>
+		       <apex:inputField value="{!teamMember.rC_Education__User__c}" rendered="{!teamMember.rC_Education__Team_Member__c == 'User'}" />
+		        <apex:inputfield value="{!teamMember.rC_Bios__Contact_2__c}" rendered="{!teamMember.rC_Education__Team_Member__c == 'Contact'}" />
+	      </div>
+	    </div>
+			<hr/>
+      </apex:repeat>
+
+    <apex:commandButton value="Save Team Members" action="{!insertMembers}" id="button1" style="float:right;font-family: Arial;font-size: 1.08em;background-color: #8ab529;border: 1px solid #6c8049;background-image: -ms-linear-gradient(top,#8AB529 0,#87AC31 100%);background-image: -moz-linear-gradient(top,#8AB529 0,#87AC31 100%);background-image: -webkit-linear-gradient(top,#8AB529 0,#87AC31 100%);background-image: linear-gradient(top,#8AB529 0,#87AC31 100%);display: inline-block;padding-top: 0;padding-bottom: 1px;padding-left: 10px;padding-right: 10px;height: 30px;color: #fff;-moz-border-radius: 3px;order-radius: 2px;-moz-box-shadow: 0 1px 2px 0 #adadad;-webkit-box-shadow: 0 1px 2px 0 #adadad;box-shadow: 0 1px 2px 0 #adadad;margin: 0;" />
+
+  </apex:form>
+</div>
+
+
+</apex:page>

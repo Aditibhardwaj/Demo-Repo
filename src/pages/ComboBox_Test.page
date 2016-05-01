@@ -1,0 +1,74 @@
+<apex:page controller="ComboBox_Test_Con" tabStyle="Account">
+    <apex:form >
+        <apex:sectionHeader title="Automagically Make a Lookup Field into a Combobox" subTitle="Combobox Demo"/>
+        <ul>
+            <li>This page shows how the new components looks in comparison to VF native components.The New compponent inherits the look and feel of Native VF components.</li>
+            <li style="color:blue;font-weight:bold">This page also shows that the same component can be reused multiple times in single a page. Most of the components which uses js will not be able to do this.</li>
+        </ul>
+        <apex:pageBlock >
+            <apex:pageBlockSection title="This is simple label and text  field(Native Components)" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Account</apex:outputLabel>
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Contact</apex:outputLabel>
+                    <apex:inputText />
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Lead</apex:outputLabel>
+                    <apex:inputText />
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case</apex:outputLabel>
+                    <apex:inputText />
+               </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="This is the brand new combobox Component(This looks exactly similar to the above native components)" collapsible="false">
+                
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Account</apex:outputLabel>
+                    <c:combobox labelField="Name" valueField="Id" SObject="Account" targetField="{!targetField}" id="combobox"/>
+                </apex:pageBlockSectionItem>
+                 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Contact</apex:outputLabel>
+                    <c:combobox labelField="Name" valueField="Id" SObject="Contact" targetField="{!targetFieldCon}" id="comboboxCon"/>
+                </apex:pageBlockSectionItem>  
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Lead</apex:outputLabel>
+                    <c:combobox labelField="Name" valueField="Id" SObject="Lead" targetField="{!targetFieldLead}"/>
+                </apex:pageBlockSectionItem>  
+                        
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case</apex:outputLabel>
+                    <c:combobox labelField="Casenumber" valueField="Id" SObject="Case" targetField="{!targetFieldCase}"/>
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Press Get Value To See the Value Passed By Component" id="val">
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Acoount</apex:outputLabel>
+                     <apex:outputText value="{!targetField}"/>  
+                </apex:pageBlockSectionItem>  
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Contact</apex:outputLabel>
+                     <apex:outputText value="{!targetFieldCon}"/> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Lead</apex:outputLabel>
+                     <apex:outputText value="{!targetFieldLead}"/> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Case</apex:outputLabel>
+                     <apex:outputText value="{!targetFieldCase}"/> 
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                 <apex:commandButton value="GetValue" reRender="val,val1"/>
+            </apex:pageBlockButtons>
+           
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

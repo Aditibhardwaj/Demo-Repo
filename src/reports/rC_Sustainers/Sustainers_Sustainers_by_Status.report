@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Count of sustainers by affiliation and status</description>
+    <filter>
+        <criteriaItems>
+            <column>rC_Giving__Summary__c.rC_Giving__Is_Sustaining_Giver__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Giving__Summary__c.rC_Giving__Giving_Level_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Giving__Summary__c.rC_Giving__Affiliation__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sustainers: Sustainers by Aff &amp; Sts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$rC_Giving__Summary__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.rC_Giving__Largest_Hard_Credit_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,549 @@
+<apex:page controller="ApproveRejectStatergies" id="page" cache="true" tabStyle="Account">
+<!--<apex:includeScript value="{!$Resource.jQuery}"/> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<style>
+ .colTable{
+     border: 2px solid #2FADAD;
+     border-collapse: collapse;
+     float: left;
+     margin-right: 5px;
+ }
+
+ .colTable tr td {
+     padding-left: 5px;
+     vertical-align: middle !important;
+ }
+
+ .colTable tbody tr th {
+    text-align:center;
+    height: 15px;
+    border-bottom: 1px solid #2FADAD !important;
+ }
+
+  .colRow:hover{
+    background-color: #e3f3ff;
+ }
+
+ .bPageBlock {
+   background-color: white !important;
+   border: 0px !important;
+ }
+
+ .tertiaryPalette {
+   background-color: #2FADAD !important;
+     border-color: #2FADAD !important;
+ }
+
+     .first1 {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: 0 1px;
+         width: 9px;
+         height: 10px;
+     }
+     .prev1 {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: -10px 1px;
+         margin: 0;
+         padding: 0;
+         width: 9px;
+         height: 10px;
+     }
+    .firstoff {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: 0 -10px;
+         width: 9px;
+         height: 10px;
+     }
+     .prevoff {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: -10px -10px;
+         margin: 0;
+         padding: 0;
+         width: 9px;
+         height: 10px;
+     }
+     .next1 {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: -17px 1px;
+         width: 9px;
+         height: 10px;
+     }
+     .last1 {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: -27px 1px;
+         width: 9px;
+         height: 10px;
+     }
+     .nextoff {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: -17px -10px;
+         width: 9px;
+         height: 10px;
+     }
+     .lastoff {
+         background-image: url(/img/paginationArrows.gif);
+         background-repeat: no-repeat;
+         background-position: -27px -10px;
+         width: 9px;
+         height: 10px;
+     }
+
+     .refreshListButton {
+            background: #e8e8e9  url("/img/alohaSkin/sync.png") no-repeat scroll 2px 2px !important;
+            height: 22px;
+            vertical-align: bottom;
+            width: 22px;
+            border: 1px solid #b5b5b5;
+        border-bottom-color: #7f7f7f;
+        }
+
+        .actionLink {
+        color: #015ba7 !important;
+        font-weight: normal;
+        text-decoration: none;
+            }
+            #massEditInner {
+              min-height: 60px !important;
+                border: 1px solid !important;
+                margin-bottom: 5px !important;
+                padding-top: 30px !important;
+                margin-left: 10px !important;
+        margin-right: 10px !important;
+            }
+
+      .black_overlay{
+      display: none;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index:500;
+      -moz-opacity: 0.8;
+      opacity:.50;
+      filter: alpha(opacity=80);
+    }
+    .white_content {
+      display: none;
+      position: absolute;
+      top: 5%;
+      left:30%;
+      width: 520px;
+      max-height: 355px;
+      border-radius: 3px;
+      z-index:700;
+      overflow: auto;
+      resize:none;
+    }
+
+    #rightTable td {
+      padding-top: 1px;
+    }
+
+    thead {
+      background-color: #F2F3F3;
+    }
+
+    .lightBoxHeader {
+      padding: 8px 6px 8px 12px;
+      background: url('/img/alohaSkin/overlayTopLft.png') left top no-repeat;
+      padding-right: 6px;
+      height: 65px;
+    }
+
+    .closeIconImage{
+      background-image: url('/img/alohaSkin/closeX.png');
+      background-position: 0 0;
+      width: 20px;
+      height: 20px;
+    }
+    .closeIconImage:hover {
+      background-position: left -20px;
+    }
+
+    #content {
+      background: white;
+      padding: 8px;
+      border-radius: 3px;
+      max-height: 300px;
+    }
+
+    #massEditTitle {
+       color: #000;
+      font-size: 1.25em;
+    }
+    .waitingSearchDiv {
+      z-index: 900 !important;
+    }
+
+    .search {
+       padding:8px 5px;
+       width:240px;
+       height:10px;
+       margin-right:5px;
+    }
+    .button {
+       position:relative;
+       padding:6px 3px;
+       left:-5px;
+       border:2px solid #2FADAD ;
+       background-color:#2FADAD ;
+       color:#fafafa;
+       background-image: none;
+    }
+    .button:hover  {
+      opacity: 0.8;
+      background-image: none;
+    }
+
+    .selected {
+      background-color: #B0E1FA;
+    }
+
+    .right-align {
+      text-align: right;
+    }
+
+    .left-align {
+      text-align: left;
+    }
+
+    #phSearchClearButtonCustom {
+          margin-top: 7px;
+          margin-left: -26px;
+          position:absolute;
+          visibility: visible;
+          background-color: #fff;
+            background-image: url('/img/alohaSkin/search_clear_sprite.png');
+            background-repeat: no-repeat;
+            cursor: pointer;
+            display: none;
+            height: 16px;
+            margin-right: 3px;
+            overflow: hidden;
+            width: 16px;
+        }
+</style>
+<apex:form id="form">
+<apex:inputHidden value="{!searchString}" id="searchString" />
+<apex:actionFunction name="performFilter" action="{!refresh}" status="status" reRender="form" onComplete="putSearchString();"/>
+<apex:actionFunction name="setInlineEditingAF" action="{!setInlineEditing}" reRender="dataSection" onComplete="showModalWindow()">
+  <apex:param name="selectedIndex" value="" assignTo="{!selectedIndex}" />
+</apex:actionFunction>
+<apex:actionFunction name="setOwnerFieldAF" action="{!setOwnerField}" reRender="dataSection" onComplete="showModalWindow()"></apex:actionFunction>
+<apex:pageMessages ></apex:pageMessages>
+<apex:pageBlock id="pageBlock">
+<apex:pageBlockSection title="All Strategies" columns="1" id="programStatusPanel">
+  <apex:outputPanel >
+    <apex:outputPanel layout="block" style="padding-bottom: 40px;">
+      <apex:outputPanel style="float:left;">
+       <!--   <input type="button" value="New Account" class="btn" onClick="createNewProgram();" title="New Account"/> -->
+         <input type="button" class="btn" value="Approve / Reject" style="display:{!IF(AND(NOT(ISNULL(listStrategy)),listStrategy.size > 0), 'inline', 'none')}" onClick="changeOwnerShip();" title="Approve or Reject Strategies"/>
+          <apex:commandButton status="status" reRender="programStatusPanel" value="" action="{!refreshPage}" title="Refresh Page" styleClass="refreshListButton" onComplete="document.getElementById('searchBox').value = '';"/>
+      </apex:outputPanel>
+      <apex:outputPanel style="float:right;display: inline-flex;">
+        <input type="text" placeholder="Search" value="" id="searchBox" class="search" onKeyDown="performSearch(event, this);" onKeyUp="setClearButton();"/>
+        <a class="headerSearchClearButton headerSearchClearButtonPress" href="javascript: void(0);" id="phSearchClearButtonCustom" name="phSearchClearButton" title="Clear search terms" onClick="clearSearchTerm();"></a>
+        <input type="button" class="button" onClick="doSearch();" value="Search"/>
+      </apex:outputPanel>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!OR(ISNULL(listStrategy),listStrategy.size == 0)}" >
+       <div class="noRowsHeader">No records to display</div>
+      </apex:outputPanel>
+      <apex:variable var="index" value="{!-1}" />
+    <apex:pageBlockTable id="pgTable" value="{!listStrategy}" var="mktProgram" rendered="{!AND(NOT(ISNULL(listStrategy)),listStrategy.size > 0)}">
+       <apex:column id="checkboxColumn" width="20px">
+          <apex:facet name="header">
+            <input type="checkbox" onclick="selectAll(this.checked);" />
+          </apex:facet>
+          <apex:inputCheckBox value="{!mktProgram.isSelected}" id="selected" styleClass="checkboxSelected" onChange="setSelected(this);"/>
+          <apex:variable var="index" value="{!index + 1}" />
+       </apex:column>
+      <!-- <apex:column headerValue="Action" width="80px" style="white-space: nowrap;">
+         <apex:outputLink value="/{!mktProgram.account.Id}/e?retURL=/apex/CustomInlineEditFeature" styleClass="actionLink">Edit</apex:outputLink>
+          &nbsp; | &nbsp;
+          <apex:commandLink value="Del" onClick="return confirmDelete();" action="{!deleteProgram}" status="status" styleClass="actionLink">
+            <apex:param name="selectedRecordId" value="{!mktProgram.account.Id}" assignTo="{!selectedRecordId}" />
+          </apex:commandLink>
+
+       </apex:column> -->
+       <apex:repeat value="{!inlineEditConfigurations}" var="progSummary" >
+          <apex:column styleClass="inlineEditClass" ondblclick="setInlineEditing({!index});">
+              <apex:facet name="header">
+                <apex:commandLink action="{!refresh}" value="{!progSummary.Field_Label__c}{!IF(sortField == progSummary.Field_API_Name__c,IF(sortOrder == SORT_ORDER_ASC,' ▲',' ▼'),'')}" reRender="programStatusPanel" status="status">
+                    <apex:param value="{!progSummary.Field_API_Name__c}" name="sortField" assignTo="{!sortField}" />
+                </apex:commandLink>
+              </apex:facet>
+              <apex:outputLink value="/{!mktProgram.Strategy.Id}" rendered="{!progSummary.Field_API_Name__c == 'Name'}">{!mktProgram.Strategy[progSummary.Field_API_Name__c]}</apex:outputLink>
+              <apex:outputField value="{!mktProgram.strategy[progSummary.Field_API_Name__c]}" rendered="{!progSummary.Field_API_Name__c != 'Name'}"/>
+           </apex:column>
+       </apex:repeat>
+    </apex:pageBlockTable>
+
+    <apex:outputPanel rendered="{!AND(NOT(ISNULL(listStrategy)),listStrategy.size > 0)}">
+        <table style="background-color: #f2f3f3; width:100%; border: 1px solid #e0e3e5;">
+                <tr>
+                    <td width="20%">
+                        <apex:outputText >{!(pageNumber * PAGE_SIZE)+1-PAGE_SIZE}-{!IF((pageNumber * PAGE_SIZE) > noOfRecords, noOfRecords,(pageNumber * PAGE_SIZE))} of {!noOfRecords}</apex:outputText>
+                    </td>
+                    <td align="center" width="60%">
+                        <span class="prevNextLinks">
+                            <span class="prevNext">
+                                <apex:commandLink action="{!first}" immediate="true" rendered="{!hasPrevious}" rerender="programStatusPanel" status="status">
+                                    <apex:image url="/s.gif" styleClass="first1" alt="First Page" />
+                                </apex:commandLink>
+                                <apex:image url="/s.gif" styleClass="{!IF(NOT(hasPrevious),'firstoff','first1')}" alt="First Page" rendered="{!!hasPrevious}"/>&nbsp;
+
+                                <apex:commandLink action="{!previous}" immediate="true" rendered="{!hasPrevious}" style="text-decoration:none;"
+                                                            rerender="programStatusPanel" status="status">
+                                    <apex:image url="/s.gif" styleClass="prev1" alt="Previous"/> Previous
+                                </apex:commandLink>
+                                <apex:image url="/s.gif" styleClass="{!IF(NOT(hasPrevious),'prevoff','prev1')}" alt="Previous" rendered="{!!hasPrevious}"/>
+                                <apex:outputLabel rendered="{!!hasPrevious}" style="color: #a8a8a8">Previous</apex:outputLabel>
+
+                                <apex:commandLink action="{!next}" immediate="true" rendered="{!hasNext}" style="text-decoration:none;"
+                                                        rerender="programStatusPanel" status="status">
+                                        <apex:outputLabel style="cursor: pointer;"> &nbsp;Next </apex:outputLabel>
+                                    <apex:image url="/s.gif" styleClass="next1" alt="Next"/>
+                                </apex:commandLink>
+                                <apex:outputLabel rendered="{!!hasNext}" style="color: #a8a8a8" >&nbsp;Next</apex:outputLabel>
+                                <apex:image url="/s.gif" styleClass="{!IF(NOT(hasNext),'nextoff','next1')}" alt="Next" rendered="{!!hasNext}"/>&nbsp;
+
+                                <apex:commandLink action="{!last}" immediate="true" rendered="{!hasNext}" rerender="programStatusPanel" status="status">
+                                    <apex:image url="/s.gif" styleClass="last1" alt="Last Page"/>
+                                </apex:commandLink>
+                                <apex:image url="/s.gif" styleClass="{!IF(NOT(hasNext),'lastoff','last1')}" alt="Last Page" rendered="{!!hasNext}"/>
+
+                             </span>
+
+                        </span>
+                    </td>
+
+                    <td width="20%"> </td>
+                </tr>
+            </table>
+    </apex:outputPanel>
+   </apex:outputPanel>
+ </apex:pageBlockSection>
+</apex:pageBlock>
+<apex:outputpanel >
+    <apex:actionstatus id="status">
+      <apex:facet name="start">
+        <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;height: 100%;opacity:0.65;width:100%;">
+          <div class="waitingHolder" style="top: 74.2px; width: 91px;">
+            <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+            <span class="waitingDescription">Please Wait...</span>
+          </div>
+        </div>
+      </apex:facet>
+    </apex:actionstatus>
+  </apex:outputpanel>
+  <apex:outputPanel id="dataSection">
+
+  <div id="light" class="white_content">
+       <table width="100%" class="lightBoxHeader">
+         <tr>
+           <td style="vertical-align:top;">
+             <h2 id="massEditTitle">Approve/Reject Stratergies</h2>
+           </td>
+           <td style="vertical-align:top;">
+             <div class="closeIconImage" style="float: right;" onClick="hideModalWindow('{!selectedIndex}');">&nbsp;</div>
+           </td>
+         </tr>
+       </table>
+       <div id="content" style="margin-top: -30px;">
+         <div id="modalWindowContent">
+                <h2 id="massEditHeader"></h2>
+                <div id="massEditInner" >
+                  <div class="fieldTableDiv">
+                    <table class="fieldTable" border="0" width="100%" height="100%" style="width:100%; height:100%;">
+                      <tr class="fieldRow">
+                        <td class="labelCol" width="30%" style="text-align: right;font-weight: bold;vertical-align: top;">
+                            <apex:outputLabel value="Comments" />
+                        </td>
+                        <td class="dataCol" width="70%">
+                          <div id="massEditFieldDiv" class="inlineEditDiv" style="display:block !important;">
+                            <span>
+                             <apex:inputTextArea value="{!commentForApprover}" style="height:70px; width:290px;"/>
+                            </span>
+                          </div>
+                        </td>
+                        </tr>
+                   </table >
+
+                   <table class="fieldTable" border="0" width="100%" height="100%" style="width:100%; height:100%;">
+
+
+                       <tr class="fieldRow">
+                        <td class="labelCol" width="30%" style="text-align: right;font-weight: bold;vertical-align: top;">
+                            <apex:outputLabel value="Next Approver" />
+                        </td>
+                        <td class="dataCol" width="70%">
+                          <div id="massEditFieldDiv" class="inlineEditDiv" style="display:block !important;">
+                            <span>
+                             <apex:inputField value="{!strategy.ownerid}" required="false"/>
+                            </span><br/>
+                            <p>
+                             One or more of the approval requests you selected may require you to specify the next approver. Specify the next approver using the box above.
+                            </p>
+
+                          </div>
+                        </td>
+                      </tr>
+
+
+                   </table>
+
+
+                  </div>
+                </div>
+             <table class="fieldTable" style="display:{!IF(radioOptions.size > 0, 'table', 'none')}" width="100%">
+             <tbody><tr class="selectionRow">
+               <td class="labelCol" style="text-align: right;padding-top: 10px;vertical-align: top;font-weight: bold;">Apply changes to</td>
+               <td class="dataCol">
+                <apex:selectRadio value="{!selectedOption}" layout="pageDirection">
+                 <apex:selectOptions value="{!radioOptions}"/>
+                </apex:selectRadio>
+               </td>
+               </tr></tbody>
+           </table>
+                <div class="inlineEditButtons" style="text-align:center;">
+                <!--  <apex:commandButton value="Save" action="{!saveAll}" rerender="form" status="status" id="saveButton" onComplete="hideModalWindow('{!selectedIndex}');"/> -->
+                  <apex:commandButton action="{!approveStrategies}" value="Approve" rerender="form" status="status" id="approveButton" onComplete="hideModalWindow('{!selectedIndex}');"/>
+                  <apex:commandButton action="{!rejectStrategies}" value="Reject" rerender="form" status="status" id="rejectButton" onComplete="hideModalWindow('{!selectedIndex}');"/>
+                  <input class="btn" type="button" value="Cancel" id="cancelButton" onClick="hideModalWindow('{!selectedIndex}');"/>
+                </div>
+              </div>
+       </div>
+      </div>
+  <div id="fade" class="black_overlay"></div>
+  </apex:outputPanel>
+</apex:form>
+
+<script>
+/*
+function confirmDelete() {
+  return confirm("Do you really want to delete this record?");
+}*/
+
+function performSearch(event, searchBox) {
+   if (event.which == 13 || event.keyCode == 13) {
+      document.getElementById('page:form:searchString').value = searchBox.value;
+      performFilter();
+      event.preventDefault();
+      return false;
+   }
+   return true;
+}
+
+function setClearButton() {
+   var searchBox = document.getElementById('searchBox');
+   if(searchBox.value.length > 0) {
+     jQuery('#phSearchClearButtonCustom').show();
+   } else {
+     jQuery('#phSearchClearButtonCustom').hide();
+   }
+}
+
+function doSearch() {
+  var searchBox = document.getElementById('searchBox');
+  if(searchBox != null && searchBox.value != '' && searchBox.value != null) {
+    document.getElementById('page:form:searchString').value = searchBox.value;
+    performFilter();
+  } else {
+    alert('You must enter a value before doing search.');
+  }
+}
+
+function clearSearchTerm() {
+  document.getElementById('searchBox').value = '';
+  document.getElementById('page:form:searchString').value = '';
+  performFilter();
+}
+
+function putSearchString() {
+  document.getElementById('searchBox').value = document.getElementById('page:form:searchString').value;
+  setClearButton();
+}
+
+function showModalWindow() {
+   document.getElementById('light').style.display = 'block';
+   document.getElementById('fade').style.display = 'block';
+}
+
+
+
+function setInlineEditing(index) {
+      var checkbox = document.getElementById('page:form:pageBlock:programStatusPanel:pgTable:'+index+':selected');
+      checkbox.checked = true;
+      jQuery(checkbox).parent().parent().addClass('selected');
+      setInlineEditingAF(index);
+}
+
+function hideModalWindow(lastIndex) {
+  var lastSelectedCheckbox = document.getElementById('page:form:pageBlock:programStatusPanel:pgTable:'+lastIndex+':selected');
+  if(lastSelectedCheckbox != null) {
+    lastSelectedCheckbox.checked = false;
+    jQuery(lastSelectedCheckbox).parent().parent().removeClass('selected');
+  }
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+}
+
+function changeOwnerShip() {
+  if(checkboxesSelected()) {
+    setOwnerFieldAF();
+  }
+  else {
+    alert('You must select at least one Strategy.');
+  }
+}
+
+
+function checkboxesSelected() {
+  var isSelected = false;
+  jQuery('.checkboxSelected').each(function(){
+    if(this.checked) {
+      isSelected = true;
+    }
+  });
+  return isSelected;
+}
+
+/*function createNewProgram() {
+  window.open('{!URLFOR($Action.Account.New)}', '_new');
+}*/
+
+function selectAll(isSelected) {
+  jQuery('.checkboxSelected').each(function(){
+    jQuery(this).attr('checked', isSelected);
+    if(isSelected) {
+      jQuery(this).parent().parent().addClass('selected');
+    }
+    else {
+      jQuery(this).parent().parent().removeClass('selected');
+    }
+  });
+}
+
+function setSelected(checkbox) {
+  if(checkbox.checked) {
+    jQuery(checkbox).parent().parent().addClass('selected');
+  }
+  else {
+    jQuery(checkbox).parent().parent().removeClass('selected');
+  }
+}
+
+
+</script>
+
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page >
+    <script type="text/javascript" src="https://pgnet142.stanford.edu/pgw/s20/js/iframeResizer.min.js">
+	</script>
+    <iframe src='https://pgnet142.stanford.edu/get/page/webpg/demo/pgrReports?pgaif=s' width='100%' scrolling="no" id="pgrReports" frameBorder="0">
+    </iframe>
+    <script>
+    iFrameResize({
+        checkOrigin: false,
+    	heightCalculationMethod:'taggedElement'
+	});    
+    </script>
+</apex:page>

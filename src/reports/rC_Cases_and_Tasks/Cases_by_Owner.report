@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>1</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Count</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <description>Count of Cases by the Case Owner</description>
+    <filter>
+        <criteriaItems>
+            <column>CLOSED</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cases: Case by Owner</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

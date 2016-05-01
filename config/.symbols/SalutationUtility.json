@@ -1,0 +1,1913 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "salMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 11
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "prefMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 12
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "subCategoryList", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 13
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "accMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 17
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "childSalMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 18
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "relationShipMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 19
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "deceasedPartnerMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 20
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "formalChildSalMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 21
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "informalStandardSalMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 22
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "prefixMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 41, 
+                "line": 25
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "accountHouseholdRecTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 7, 
+                "line": 27
+            }, 
+            "type": "Id"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "SalutationUtility", 
+    "tableDeclaration": {
+        "type": "SalutationUtility", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "SalutationUtility"
+    }, 
+    "key": "01p63000000Cjc9AAC", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 31
+            }, 
+            "name": "sobjList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 32
+            }, 
+            "name": "accIdSet"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 33
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 37
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 59
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 60
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 74, 
+                "line": 139
+            }, 
+            "name": "sobjList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 140
+            }, 
+            "name": "objName"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 141
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 149
+            }, 
+            "name": "sObj"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 87, 
+                "line": 177
+            }, 
+            "name": "sobjList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 178
+            }, 
+            "name": "salHouseHoldList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 179
+            }, 
+            "name": "objName"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 184
+            }, 
+            "name": "sObj"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 224
+            }, 
+            "name": "sObj"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 70, 
+                "line": 224
+            }, 
+            "name": "type"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 82, 
+                "line": 224
+            }, 
+            "name": "salutationUse"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 225
+            }, 
+            "name": "objName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 226
+            }, 
+            "name": "accName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 227
+            }, 
+            "name": "conName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 228
+            }, 
+            "name": "salutationLine"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 229
+            }, 
+            "name": "salObj"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 239
+            }, 
+            "name": "acntName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 255
+            }, 
+            "name": "salLine1"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 256
+            }, 
+            "name": "salLine"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 257
+            }, 
+            "name": "salLineLong"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 258
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 342
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 342
+            }, 
+            "name": "isPrimary"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 343
+            }, 
+            "name": "salLine"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 345
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 346
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 371
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 67, 
+                "line": 371
+            }, 
+            "name": "isPrimary"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 372
+            }, 
+            "name": "salLine"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 374
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 375
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 399
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 400
+            }, 
+            "name": "salLine"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 401
+            }, 
+            "name": "maleConId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 402
+            }, 
+            "name": "femaleConId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 403
+            }, 
+            "name": "conMalePrefix"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 404
+            }, 
+            "name": "conFemalePrefix"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 405
+            }, 
+            "name": "middleName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 406
+            }, 
+            "name": "suffix"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 408
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 492
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 494
+            }, 
+            "name": "insideSal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 495
+            }, 
+            "name": "preferredConId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 496
+            }, 
+            "name": "secondaryConId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 497
+            }, 
+            "name": "insideSalPref"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 498
+            }, 
+            "name": "insideSalSec"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 499
+            }, 
+            "name": "conPrefPrefix"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 500
+            }, 
+            "name": "conSecPrefix"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 502
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 52, 
+                "line": 583
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 584
+            }, 
+            "name": "conName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 585
+            }, 
+            "name": "secondaryConName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 586
+            }, 
+            "name": "preferredConName"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 588
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 614
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 615
+            }, 
+            "name": "preferredConName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 616
+            }, 
+            "name": "secondaryConName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 619
+            }, 
+            "name": "conName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 620
+            }, 
+            "name": "secConName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 621
+            }, 
+            "name": "prefConName"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 623
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 656
+            }, 
+            "name": "id"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 657
+            }, 
+            "name": "conName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 658
+            }, 
+            "name": "secondaryConName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 659
+            }, 
+            "name": "preferredConName"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 661
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 685
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 732
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 737
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 742
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 754
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 767
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 778
+            }, 
+            "name": "accName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 778
+            }, 
+            "name": "type"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 39, 
+                "line": 791
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 51, 
+                "line": 791
+            }, 
+            "name": "type"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 792
+            }, 
+            "name": "maritalStatusList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 793
+            }, 
+            "name": "prefix"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 794
+            }, 
+            "name": "firstName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 795
+            }, 
+            "name": "lastName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 796
+            }, 
+            "name": "middleName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 797
+            }, 
+            "name": "suffix"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 798
+            }, 
+            "name": "proSuffix"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 799
+            }, 
+            "name": "pubMiddleName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 800
+            }, 
+            "name": "prefixPrefLong"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 806
+            }, 
+            "name": "conName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 882
+            }, 
+            "name": "conPrefix"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 80, 
+                "line": 930
+            }, 
+            "name": "sobjList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 931
+            }, 
+            "name": "objName"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 932
+            }, 
+            "name": "accountChildSalMap"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 933
+            }, 
+            "name": "contactChildSalMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 935
+            }, 
+            "name": "salutationListToUpdate"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 936
+            }, 
+            "name": "salLine"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 937
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 939
+            }, 
+            "name": "sObjMap"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 940
+            }, 
+            "name": "sobjt"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1024
+            }, 
+            "name": "conPartner"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1039
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 1041
+            }, 
+            "name": "sobj"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 1045
+            }, 
+            "name": "accountChildSalList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 1047
+            }, 
+            "name": "accName"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 1051
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1067
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 1068
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 1070
+            }, 
+            "name": "contactChildSalList"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 1073
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 1111
+            }, 
+            "name": "SobjList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 1113
+            }, 
+            "name": "contactChildSalMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 1114
+            }, 
+            "name": "householdSalutationToUpdate"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 1115
+            }, 
+            "name": "salLine1"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 1116
+            }, 
+            "name": "parentAccIdSet"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1122
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1125
+            }, 
+            "name": "sObjMap"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1126
+            }, 
+            "name": "sobjt"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1146
+            }, 
+            "name": "acnt"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 1147
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 1149
+            }, 
+            "name": "childHouseHoldSalutationList"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 1155
+            }, 
+            "name": "sal1"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 1231
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 1238
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 1239
+            }, 
+            "name": "conPrefix"
+        }
+    ], 
+    "id": "01p63000000Cjc9AAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "populateHouseHoldMaps", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "sobjList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 31
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "createChildSalutation", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "sobjList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 139
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "createHouseholdSalutationOnAccount", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "sobjList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 177
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "createSalutation", 
+            "parameters": [
+                {
+                    "type": "SObject", 
+                    "name": "sObj"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "type"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "salutationUse"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 224
+            }, 
+            "returnType": "rC_Bios__Salutation__c", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "gethouseholdSalutationLine", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isPrimary"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 342
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "gethouseholdSalLine1ForPrefLong", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isPrimary"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 371
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getHouseholdPrefMailNameLong", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 399
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getHouseholdInsideFormalSalutation", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 492
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getInsideFirstNameSalutation", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 583
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "getInsideInformal", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "preferredConName"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "secondaryConName"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 614
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getInsideStandardInformalSalutation", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "id"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 656
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getPrefix", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 685
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getFirstName", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 732
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getLastName", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 737
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getMiddleName", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 742
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getSuffix", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 754
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getProSuffix", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 767
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getAccountName", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "accName"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "type"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 778
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getContactName", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "type"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 791
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "updateChildSaluatationline1", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "sobjList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 930
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "updateHouseHoldChildSalutations", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "SobjList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1111
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "getContactPrefix", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "con"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 1238
+            }, 
+            "returnType": "String", 
+            "type": null
+        }
+    ]
+}

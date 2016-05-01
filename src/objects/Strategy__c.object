@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>T-459059</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>T-464755</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account associated with this strategy</inlineHelpText>
+        <label>Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Household</value>
+            </filterItems>
+            <infoMessage>This filter defaults to a HOUSEHOLD search remove the criteria filter to search for ORGANIZATIONS</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Strategies</relationshipLabel>
+        <relationshipName>Strategies</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Submission_Criteria__c</fullName>
+        <description>T-469473</description>
+        <externalId>false</externalId>
+        <formula>NOT(ISBLANK(TEXT(Prospect__r.rC_Bios__Preferred_Email__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If the formula is TRUE, the Strategy record related to this contact can be submitted for approval.</inlineHelpText>
+        <label>Approval Submission Criteria</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Communication_Plan__c</fullName>
+        <defaultValue>&quot;Mail, Phone, In-Person Meetings&quot;</defaultValue>
+        <description>T-464755</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the basics of your communication plan</inlineHelpText>
+        <label>Communication Plan</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Confidence__c</fullName>
+        <description>S-340359</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is your confidence in this proposal?</inlineHelpText>
+        <label>Confidence</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Long-shot</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50/50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Thumbs-up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contact2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>TBD</description>
+        <externalId>false</externalId>
+        <label>Contact2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategies2</relationshipLabel>
+        <relationshipName>Strategies2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Gift_Total__c</fullName>
+        <description>Sum of all the related proposals - this amount will be the approved amount from the other team.</description>
+        <externalId>false</externalId>
+        <label>Expected Gift Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Goal__c</fullName>
+        <description>Overall goal of strategy</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Outline your: Strategy/goal/use case/plan/Communication methodology/events/emails http://merskyjaffe.com/general-fundraising/develop-strategic-solicitation-strategy/</inlineHelpText>
+        <label>Goal</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Strategy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>S-371633</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to ENGAGEMENT type strategy</inlineHelpText>
+        <label>Parent Strategy</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only Engagement strategies can be parents of solicitation</errorMessage>
+            <filterItems>
+                <field>Strategy__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Engagement</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Solicitation</value>
+            </filterItems>
+            <infoMessage>Enagement Strategies can have multiple child solicitation strategies.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Strategy__c</referenceTo>
+        <relationshipLabel>Solicitation Strategies</relationshipLabel>
+        <relationshipName>Strategies</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Plan__c</fullName>
+        <defaultValue>&quot;Outline your: Strategy/goal/use case/plan/Communication methodology/events/emails&quot;</defaultValue>
+        <description>What are the main steps to accomplishing the strategy</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What are the main steps to accomplishing the strategy</inlineHelpText>
+        <label>Plan</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Ask_Range__c</fullName>
+        <description>T-464755</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the most likely range for the total strategy ask.</inlineHelpText>
+        <label>Proposed Ask Range</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&lt;50,000</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50,000 - 99,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100,000 - 999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1,000,000 - 4,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5,000,000 - 9,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt;10,000,000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prospect__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategies</relationshipLabel>
+        <relationshipName>Strategies</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>T-459059 POC for strategy lifecycle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the record status to correspond to the selected record type. Status values depend on record type.
+Example: Engagement record &quot;IN PROGRESS&quot; or Solicitation record &quot;PENDING APPROVAL&quot;</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready for Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Team Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Team Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Executive Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Solicitation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Stewardship_Plan__c</fullName>
+        <description>T-464755</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Outline the continuing relationship building activities for this prospect</inlineHelpText>
+        <label>Stewardship Plan</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Team_Approver1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-470421 - used for dynamic team approval</description>
+        <externalId>false</externalId>
+        <label>Team Approver1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Strategies to Approve</relationshipLabel>
+        <relationshipName>StrategiesUser1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Team_Approver2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-470421</description>
+        <externalId>false</externalId>
+        <label>Team Approver2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Strategies to Approve</relationshipLabel>
+        <relationshipName>StrategiesUser2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Team_Approver3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-470421 Define relative approvers for dynamic approval</description>
+        <externalId>false</externalId>
+        <label>Team Approver3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Strategies</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Strategy</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Engagement_Strategies</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Prospect__c</columns>
+        <columns>Proposed_Ask_Range__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Strategy__c.Engagement</value>
+        </filters>
+        <label>Engagement Strategies</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Solicitation_Strategies</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Prospect__c</columns>
+        <columns>Proposed_Ask_Range__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Strategy__c.Solicitation</value>
+        </filters>
+        <label>Solicitation Strategies</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Strategy Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Strategies</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Engagement</fullName>
+        <active>true</active>
+        <description>Preliminary strategy for the prospect</description>
+        <label>Engagement</label>
+        <picklistValues>
+            <picklist>Confidence__c</picklist>
+            <values>
+                <fullName>50%2F50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-shot</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Thumbs-up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposed_Ask_Range__c</picklist>
+            <values>
+                <fullName>%3C50%2C000</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>%3E10%2C000%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000 - 4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000 - 999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000 - 9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000 - 99%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Solicitation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Solicitation</fullName>
+        <active>true</active>
+        <description>Define the overall solicitation strategy that will include proposals</description>
+        <label>Solicitation</label>
+        <picklistValues>
+            <picklist>Confidence__c</picklist>
+            <values>
+                <fullName>50%2F50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Long-shot</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Thumbs-up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposed_Ask_Range__c</picklist>
+            <values>
+                <fullName>%3C50%2C000</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>%3E10%2C000%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000 - 4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000 - 999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000 - 9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000 - 99%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Executive Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Solicitation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Executive Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Team Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Validate_Manual_Strategy_Status_Changes</fullName>
+        <active>true</active>
+        <description>T-470420 Prevent user from setting invalid status; must be in sync with approval</description>
+        <errorConditionFormula>OR(
+(ISPICKVAL(Status__c,&quot;In Solicitation&quot;) &amp;&amp; TEXT(PRIORVALUE(Status__c)) &lt;&gt; &quot;Approved&quot;),
+(ISPICKVAL(Status__c,&quot;Completed&quot;) &amp;&amp; TEXT(PRIORVALUE(Status__c)) &lt;&gt; &quot;In Solicitation&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Invalid Status selected</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Related_Contact</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Related Contact</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var firstContactId=&apos;{!Strategy__c.ProspectId__c}&apos;; 
+var accountId=&apos;{!Strategy__c.AccountId__c}&apos;; 
+var recordId= &apos;{!Strategy__c.Id}&apos;; 
+var secondContactId = &apos;{!Strategy__c.Contact2Id__c}&apos;; 
+
+var result = sforce.apex.execute(&quot;AddRelatedContacts&quot;,&quot;populateContactField&quot;,{recordId : recordId,objectName : &apos;Strategy__c&apos;,accountId: accountId,firstContactId: firstContactId,secondContactId : secondContactId,firstContactAPIName : &apos;Prospect__c&apos;,secondContactAPIName : &apos;Contact2__c&apos;});
+
+if(result != &apos;&apos;){ 
+   alert(result); 
+}else{ 
+   window.parent.location.href = &quot;/&quot;+recordId; 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>NEW_STRATEGY</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Strategy</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var strategyId=&apos;{!Strategy__c.Id}&apos;; 
+
+
+var result = sforce.apex.execute(&quot;URLGeneratorService&quot;,&quot;generateSolicitationStrategyUrl&quot;,{strategyId : strategyId}); 
+
+
+window.parent.location.href = result;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Engagement_Strategy</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Engagement Strategy</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var contactId=&apos;{! Contact.Id }&apos;; 
+var accountId=&apos;{!Account.Id}&apos;; 
+
+var result = sforce.apex.execute(&quot;URLGeneratorService&quot;,&quot;generateEngagementStrategyUrl&quot;,{contactId: contactId, accountId: accountId}); 
+
+
+window.parent.location.href = result;</url>
+    </webLinks>
+</CustomObject>

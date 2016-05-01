@@ -1,0 +1,572 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "sObjcontactReport", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 12
+            }, 
+            "type": "Contact_Report__c"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "contactReportForParticipant", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 13
+            }, 
+            "type": "Contact_Report__c"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "accName", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 15
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "conName", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 16
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "participantList", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 17
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "taskList", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 18
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "taskNewRec", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 19
+            }, 
+            "type": "TaskWrapper"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "defaultTaskList", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 48, 
+                "line": 20
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "removeIndex", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 23
+            }, 
+            "type": "Integer"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [
+        {
+            "properties": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "type", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 18, 
+                        "line": 106
+                    }, 
+                    "type": "String"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "member", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 18, 
+                        "line": 107
+                    }, 
+                    "type": "String"
+                }
+            ], 
+            "externalReferences": [], 
+            "innerClasses": [], 
+            "interfaces": [], 
+            "constructors": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "Participant", 
+                    "parameters": [
+                        {
+                            "type": "String", 
+                            "name": "type"
+                        }, 
+                        {
+                            "type": "String", 
+                            "name": "member"
+                        }
+                    ], 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 11, 
+                        "line": 109
+                    }, 
+                    "type": null
+                }
+            ], 
+            "namespace": null, 
+            "name": "Participant", 
+            "tableDeclaration": {
+                "type": "Participant", 
+                "modifiers": [
+                    "public"
+                ], 
+                "references": [], 
+                "location": {
+                    "column": 16, 
+                    "line": 105
+                }, 
+                "name": "Participant"
+            }, 
+            "key": null, 
+            "variables": [
+                {
+                    "type": "String", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 110
+                    }, 
+                    "name": "type"
+                }, 
+                {
+                    "type": "String", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 111
+                    }, 
+                    "name": "member"
+                }
+            ], 
+            "id": null, 
+            "methods": []
+        }, 
+        {
+            "properties": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "sobjTask", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 16, 
+                        "line": 164
+                    }, 
+                    "type": "Task"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "isCreate", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 165
+                    }, 
+                    "type": "Boolean"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "defaultTask", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 44, 
+                        "line": 166
+                    }, 
+                    "type": "SS_ContactReport_DefaultTasks__c"
+                }
+            ], 
+            "externalReferences": [], 
+            "innerClasses": [], 
+            "interfaces": [], 
+            "constructors": [
+                {
+                    "modifiers": [
+                        "private"
+                    ], 
+                    "name": "TaskWrapper", 
+                    "parameters": [], 
+                    "visibility": "PRIVATE", 
+                    "references": [], 
+                    "location": {
+                        "column": 4, 
+                        "line": 167
+                    }, 
+                    "type": null
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "TaskWrapper", 
+                    "parameters": [
+                        {
+                            "type": "Task", 
+                            "name": "sobjTask"
+                        }, 
+                        {
+                            "type": "Boolean", 
+                            "name": "isCreate"
+                        }
+                    ], 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 11, 
+                        "line": 168
+                    }, 
+                    "type": null
+                }
+            ], 
+            "namespace": null, 
+            "name": "TaskWrapper", 
+            "tableDeclaration": {
+                "type": "TaskWrapper", 
+                "modifiers": [
+                    "public"
+                ], 
+                "references": [], 
+                "location": {
+                    "column": 16, 
+                    "line": 163
+                }, 
+                "name": "TaskWrapper"
+            }, 
+            "key": null, 
+            "variables": [
+                {
+                    "type": "Task", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 17, 
+                        "line": 169
+                    }, 
+                    "name": "sobjTask"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "modifiers": [], 
+                    "references": [], 
+                    "location": {
+                        "column": 20, 
+                        "line": 170
+                    }, 
+                    "name": "isCreate"
+                }
+            ], 
+            "id": null, 
+            "methods": []
+        }
+    ], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "SS_Contact_ReportsController", 
+            "parameters": [
+                {
+                    "type": "StandardSetController", 
+                    "name": "stdController"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 28
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "SS_Contact_ReportsController", 
+    "tableDeclaration": {
+        "type": "SS_Contact_ReportsController", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "SS_Contact_ReportsController"
+    }, 
+    "key": "01p630000000QjHAAU", 
+    "variables": [
+        {
+            "type": "StandardSetController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 71, 
+                "line": 28
+            }, 
+            "name": "stdController"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 42
+            }, 
+            "name": "conId"
+        }, 
+        {
+            "type": "SS_ContactReport_DefaultTasks__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 48
+            }, 
+            "name": "defaultTask"
+        }, 
+        {
+            "type": "Task", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 49
+            }, 
+            "name": "ss_task"
+        }, 
+        {
+            "type": "TaskWrapper", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 54
+            }, 
+            "name": "taskWrap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 59
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 77
+            }, 
+            "name": "taskListToInsert"
+        }, 
+        {
+            "type": "TaskWrapper", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 82
+            }, 
+            "name": "twrap"
+        }, 
+        {
+            "type": "Participant", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 125
+            }, 
+            "name": "newParticipant"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 129
+            }, 
+            "name": "usr"
+        }, 
+        {
+            "type": "TaskWrapper", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 183
+            }, 
+            "name": "newTask"
+        }
+    ], 
+    "id": "01p630000000QjHAAU", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "setDefaultData", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 34
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "submitAction", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 75
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "addParticipant", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 122
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "removeParticipantAction", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 149
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "createTask", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 181
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }
+    ]
+}

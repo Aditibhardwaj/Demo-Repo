@@ -1,0 +1,541 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="format-detection" content="telephone=no"/>
+        
+        <!-- CSS -->
+        <apex:stylesheet value="{!URLFOR($Resource.sf1_template, '/css/bootstrap.min.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.sf1_template, '/slds/styles/salesforce-lightning-design-system-ltng.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.sf1_template, '/css/font-awesome.min.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.sf1_template, '/css/style.css')}"/>
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"/>
+
+    </head>
+
+    
+
+    <body class="ui slds">
+        <div class="container mt75">
+        	
+		    <div class="navbar navbar-default navbar-fixed-top">
+		    	<div class="progress-container row">
+		        	<div class="progress">
+						<div class="progress-bar slds-theme--brand active" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 33%;">
+						Step 1 of 3
+						</div>
+				    </div>
+			    </div>
+		    	<div class="navbar-inner flex-horizontal">
+		        	<ul class="nav nav-pills">
+					  <li role="presentation" class="active">
+					  	<a href="#step1" aria-controls="step1" role="tab" data-toggle="tab" data-step="1"><i class="fa fa-user" aria-hidden="true"></i> Info</a>
+				  	  </li>
+					  <li role="presentation">
+					  	<a href="#step2" aria-controls="step2" role="tab" data-toggle="tab" data-step="2"><i class="fa fa-cog" aria-hidden="true"></i> Options</a>
+				  	  </li>
+				  	  <li role="presentation">
+					  	<a href="#step3" aria-controls="step3" role="tab" data-toggle="tab" data-step="3"><i class="fa fa-tasks" aria-hidden="true"></i> Tasks</a>
+				  	  </li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-content container-center slds-medium-size--6-of-8 slds-large-size--6-of-8">
+
+				<!-- tab 1 -->
+    			<div role="tabpanel" class="tab-pane fade in active" id="step1">
+
+		        	<form>
+		        		<h3 class="slds-page-header__title slds-m-bottom--small">Information</h3>
+		        		<div class="slds-box slds-theme--default">
+		        			<div class="slds-grid slds-wrap">
+			        			<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+										<label for="account" class="slds-form-element__label">Account</label>
+										<div class="slds-text-heading--label">XYZ Corporation</div>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+										<label for="contact" class="slds-form-element__label">Contact</label>
+										<div class="slds-text-heading--label">Lorraine Garcia</div>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+										<label for="author" class="slds-form-element__label">Author</label>
+										<div class="input-group">
+										  <input type="text" class="slds-input" placeholder="Search for..."/>
+										  <span class="input-group-btn">
+										    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-search"></i></button>
+										  </span>
+										</div>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<label class="slds-form-element__label">Significant</label>
+									<div class="form-group">
+									  <label>
+									    <input type="checkbox" checked="checked" id="significant"/>
+									  </label>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+								    <label class="slds-form-element__label" for="type">Type</label>
+									    <div class="slds-form-element__control">
+									      <div class="slds-select_container">
+									        <select id="type" class="slds-select">
+									          <option>Option One</option>
+									          <option>Option Two</option>
+									          <option>Option Three</option>
+									        </select>
+									      </div>
+									    </div>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<label class="slds-form-element__label">Complete</label>
+									<div class="form-group">
+									  <label>
+									    <input type="checkbox" id="complete"/>
+									  </label>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+								    <label class="slds-form-element__label" for="Purpose">Purpose</label>
+									    <div class="slds-form-element__control">
+									      <div class="slds-select_container">
+									        <select id="purpose" class="slds-select">
+									          <option>Option One</option>
+									          <option>Option Two</option>
+									          <option>Option Three</option>
+									        </select>
+									      </div>
+									    </div>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+										<label for="date" class="slds-form-element__label">Date</label>
+										<input type="date" class="slds-input" id="date"/>
+									</div>
+								</div>
+								<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+									<div class="form-group">
+								    <label class="slds-form-element__label" for="tone">Tone</label>
+									    <div class="slds-form-element__control">
+									      <div class="slds-select_container">
+									        <select id="tone" class="slds-select">
+									          <option>Option One</option>
+									          <option>Option Two</option>
+									          <option>Option Three</option>
+									        </select>
+									      </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h3 class="slds-page-header__title slds-m-bottom--small slds-m-top--large">Summary</h3>
+						<div class="slds-box slds-theme--default">
+							<div class="form-group slds-col--padded">
+							  <label class="slds-form-element__label" for="subject">Subject</label>
+							  <input type="text" class="slds-input" id="subject" placeholder="Subject"/>
+							</div>
+							<div class="form-group slds-col--padded">
+							  <textarea class="slds-textarea" rows="4" placeholder="Enter Executive Summary"></textarea>
+							</div>
+						</div>
+
+						<h3 class="slds-page-header__title slds-m-bottom--small slds-m-top--large">Narative</h3>
+						<div class="slds-box slds-theme--default">
+						    <div class="form-group slds-col--padded">
+							  <textarea class="slds-textarea" rows="4" placeholder="Enter Narrative"></textarea>
+							</div>
+						</div>
+
+						<div class="iblk mt20 mb20">
+							<a class="slds-button slds-button--neutral next pull-right" href="#">Continue</a>
+						</div>
+				    </form>
+			    </div>
+
+			    <!-- tab 2 -->
+    			<div role="tabpanel" class="tab-pane fade" id="step2">
+    				
+    				<h3 class="slds-page-header__title slds-m-bottom--small">Options</h3>
+					<div class="slds-box slds-theme--default slds-grid slds-wrap mb30">
+						<div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2">
+							<label class="slds-form-element__label" for="research-items">Request Research Items?</label>
+		    				<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="research-items"/>
+							  </label>
+							</div>
+						</div>
+						<div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2"> 
+							<label class="slds-form-element__label" for="planned-giving">Interested In Planned Giving?</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="planned-giving"/>
+							  </label>
+							</div> 
+						</div>
+						<div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2"> 
+							<label class="slds-form-element__label" for="volunteer-interest">Volunteer Interest?</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="volunteer-interest"/>
+							  </label>
+							</div>
+						</div>
+						<div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2">
+							<label class="slds-form-element__label" for="prospect-change">Prospect Change Request?</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="prospect-change"/>
+							  </label>
+							</div>
+						</div>
+						<div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2"> 
+							<label class="slds-form-element__label" for="Reassign">Reassign?</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="reassign"/>
+							  </label>
+							</div>
+						</div>
+						<div class="slds-col--padded slds-size--1-of-1 slds-large-size--1-of-2"> 
+							<label class="slds-form-element__label" for="prospect-relationship">Prospect Relationship Change?</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="prospect-relationship"/>
+							  </label>
+							</div>
+						</div>
+    				</div>
+
+    				<h3 class="slds-page-header__title slds-m-top--large slds-m-bottom--small">Participants</h3>
+    				<div class="slds-box slds-theme--default">
+    					<h3 class="slds-text-heading--label">Current Participants</h3>
+    					<table class="table">
+    						<thead>
+	    						<tr class="slds-text-heading--label">
+	    							<th>&nbsp;</th>
+	    							<th>Type</th>
+	    							<th>Member</th>
+	    						</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td><button class="btn btn-xs slds-button--brand"> <i class="fa fa-trash"></i></button></td>
+    								<td>User</td>
+    								<td>Sonya Robins</td>
+    							</tr>
+    							<tr>
+    								<td><button class="btn btn-xs slds-button--brand"> <i class="fa fa-trash"></i></button></td>
+    								<td>Contact</td>
+    								<td>Eric Williams</td>
+    							</tr>
+    						</tbody>
+						</table>
+						<h3 class="slds-text-heading--label mt30 mb20">Add Participants</h3>
+    					<div class="slds-grid slds-wrap">
+	    					<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+								<div class="form-group">
+							    <label class="slds-form-element__label" for="type">Type</label>
+								    <div class="slds-form-element__control">
+								      <div class="slds-select_container">
+								        <select id="tone" class="slds-select">
+								          <option>Option One</option>
+								          <option>Option Two</option>
+								          <option>Option Three</option>
+								        </select>
+								      </div>
+								    </div>
+								</div>
+							</div>
+	    					<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-2">
+								<div class="form-group">
+									<label for="author" class="slds-form-element__label">Member</label>
+									<div class="input-group">
+									  <input type="text" class="slds-input" placeholder="Search for..."/>
+									  <span class="input-group-btn">
+									    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-search"></i></button>
+									  </span>
+									</div>
+								</div>
+							</div>
+							<div class="slds-col--padded slds-small--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+								<div class="form-group">
+									<button class="btn-block slds-button slds-button--brand"><i class="fa fa-plus"></i> Add Participants</button>
+								</div>
+	    					</div>
+						</div>
+    					
+    				</div>
+    				<div class="iblk mt20 mb20">
+					  <a class="slds-button slds-button--neutral next pull-right" href="#">Continue</a>
+					</div>
+
+    			</div>
+
+    			<!-- Tab 3 -->
+    			<div role="tabpanel" class="tab-pane fade" id="step3">
+    				<h3 class="slds-page-header__title slds-m-bottom--small">Task List View</h3>
+					<div class="slds-box slds-theme--default">
+						<div class="create-task-box text-right">
+							<button class="slds-button slds-button--neutral" data-toggle="modal" data-target="#create-task"><i class="fa fa-plus"></i> Create Tasks</button>
+						</div>
+						<h3 class="slds-text-heading--label">Current Participants</h3>
+    					<table class="table">
+    						<thead>
+	    						<tr class="slds-text-heading--label">
+	    							<th>Edit</th>
+	    							<th>Yes/No</th>
+	    							<th>Subject</th>
+	    						</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td>
+    									<button class="btn btn-xs slds-button--neutral" data-toggle="modal" data-target="#create-task"> <i class="fa fa-pencil"></i></button>
+									</td>
+    								<td>
+								    	<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-size="mini" data-offstyle="grey"/>
+    								</td>
+    								<td>Task One Lorem ipsum dolor</td>
+    							</tr>
+    							<tr>
+    								<td>
+    									<button class="btn btn-xs slds-button--neutral" data-toggle="modal" data-target="#create-task"> <i class="fa fa-pencil"></i></button>
+									</td>
+    								<td>
+								    	<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-size="mini" data-offstyle="grey"/>
+    								</td>
+    								<td>Task Two sed do eiusmod</td>
+    							</tr>
+    							<tr>
+    								<td>
+    									<button class="btn btn-xs slds-button--neutral" data-toggle="modal" data-target="#create-task"> <i class="fa fa-pencil"></i></button>
+									</td>
+    								<td>
+								    	<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-size="mini" data-offstyle="grey"/>
+    								</td>
+    								<td>Task Three tempor incididunt</td>
+    							</tr>
+    							<tr>
+    								<td>
+    									<button class="btn btn-xs slds-button--neutral" data-toggle="modal" data-target="#create-task"> <i class="fa fa-pencil"></i></button>
+									</td>
+    								<td>
+								    	<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-size="mini" data-offstyle="grey"/>
+    								</td>
+    								<td>Task Four odit aut fugit</td>
+    							</tr>
+
+    							
+    						</tbody>
+						</table>
+					</div>
+					<div class="slds-m-top--xx-large">
+						<button class="slds-button slds-button--brand btn-block"><i class="fa fa-check"></i> Submit</button>
+					</div>
+
+    				
+    			</div><!-- /tab 3 -->
+
+			</div>
+        </div>
+        
+
+        <!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h2 class="slds-text-heading--medium" id="myModalLabel">Options Title</h2>
+		      </div>
+		      <div class="slds-modal__content slds-p-around--medium">
+		        <table class="table">
+	        		<thead>
+	        			<tr>
+							<th></th>
+							<th>First</th>
+							<th>Last</th>
+						</tr>        			
+	        		</thead>
+	        		<tbody>
+	        			<tr>
+	        				<td>
+	        					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="checked"/>
+	        				</td>
+	        				<td>John</td>
+	        				<td>Smith</td>
+	        			</tr>
+	        			<tr>
+	        				<td>
+	        					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>
+	        				</td>
+	        				<td>John</td>
+	        				<td>Smith</td>
+	        			</tr>
+	        			<tr>
+	        				<td>
+	        					<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"/>
+	        				</td>
+	        				<td>John</td>
+	        				<td>Smith</td>
+	        			</tr>
+	        		</tbody>
+		        </table>
+		      </div>
+		      <div class="slds-modal__footer">
+		        <button type="button" class="slds-button slds-button--neutral" data-dismiss="modal">Close</button>
+		        <button type="button" class="slds-button slds-button--brand">Select</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="otherforms" tabindex="-1" role="dialog" aria-labelledby="otherforms">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="slds-modal__header">
+		        <h2 class="slds-text-heading--medium" id="myModalLabel">Other forms</h2>
+		      </div>
+		      <div class="slds-modal__content slds-p-around--medium">
+		        form here
+		      </div>
+		      <div class="slds-modal__footer">
+		        <button type="button" class="slds-button slds-button--neutral" data-dismiss="modal">Close</button>
+		        <button type="button" class="slds-button slds-button--brand">Select</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal - Tasks -->
+		<div class="modal fade" id="create-task" tabindex="-1" role="dialog" aria-labelledby="create-task">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="slds-modal__header">
+		        <h2 class="slds-text-heading--medium" id="myModalLabel">Create New Task</h2>
+		      </div>
+		      <div class="slds-modal__content slds-p-around--medium">
+		      	
+		      	<h3 class="slds-page-header__title slds-m-bottom--small">Task Information</h3>
+				<div class="slds-box slds-theme--shade">
+					<div class="form-group">
+						<label for="subject-task" class="slds-form-element__label">Subject</label>
+						<input type="text" class="slds-input" id="subject-task" placeholder="Subject"/>
+					</div>
+					<div class="form-group">
+						<label for="date-task" class="slds-form-element__label">Date</label>
+						<input type="date" class="slds-input" id="date-task"/>
+					</div>
+					<div class="form-group">
+						<label for="comments" class="slds-form-element__label">Comments</label>
+					  <textarea class="slds-textarea" rows="4" placeholder="Enter Comments"></textarea>
+					</div>
+				</div>
+				<hr/>
+				<h3 class="slds-page-header__title slds-m-bottom--small">Reminder</h3>
+				<div class="slds-box slds-theme--shade">
+					<div class="form-group">
+						<label for="status" class="slds-form-element__label">Status</label>
+						<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="status" class="slds-form-element__label">Priority</label>
+						<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					</div>
+				</div>
+				<hr/>
+				<h3 class="slds-page-header__title slds-m-bottom--small">Recurrence</h3>
+				<div class="slds-box slds-theme--shade mb20">
+					<div class="checkbox">
+					  <label>
+					    <input type="checkbox" id="task-modal"/>
+					    Create Recurring Series of Tasks
+					  </label>
+					</div>
+				</div>
+
+		      </div>
+		      <div class="slds-modal__footer">
+		        <button type="button" class="slds-button slds-button--neutral" data-dismiss="modal">Close</button>
+		        <button type="button" class="slds-button slds-button--brand">Submit</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<script>
+		  $(function() {
+		    $('#significant, #complete, #research-items, #planned-giving, #volunteer-interest, #prospect-change, #reassign, #prospect-relationship, #task-modal, #task2, #task3, #task4').bootstrapToggle({
+		      offstyle: "grey",
+		      width: '100px',
+		      height: '34px',
+		      on: 'Yes',
+		      off: 'No'
+		    });
+		  })
+
+
+		// PROGRESS BAR //  
+		$('.next').click(function(){
+
+		  var nextId = $(this).parents('.tab-pane').next().attr("id");
+		  $('[href=#'+nextId+']').tab('show');
+		  return false;
+		  
+		})
+
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		  
+		  //update progress
+		  var step = $(e.target).data('step');
+		  var percent = (parseInt(step) / 3) * 100;
+		  
+		  $('.progress-bar').css({width: percent + '%'});
+		  $('.progress-bar').text("Step " + step + " of 3");
+		  
+		  //e.relatedTarget // previous tab
+		  
+		})
+
+		$('.first').click(function(){
+
+		  $('#myWizard a:first').tab('show')
+
+		})
+		</script>
+        <!-- Bootstrap JS -->
+        <apex:includeScript value="{!URLFOR($Resource.sf1_template, '/js/jquery.min.js')}"/>  
+        <apex:includeScript value="{!URLFOR($Resource.sf1_template, '/js/bootstrap.min.js')}"/>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    </body>
+
+    
+</html>
+</apex:page>

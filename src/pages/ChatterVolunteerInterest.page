@@ -1,0 +1,17 @@
+<apex:page StandardController="Contact_Report__c"  extensions="ChatterPostQuickActionController">
+    <script>
+        function reloadPage() {
+            window.parent.location.href = "/{!$CurrentPage.Parameters.Id}"; 
+        }
+    </script>
+	<apex:form >
+	    <apex:outputPanel >
+	      {!chatterVolunteerpostToDisplay}
+	      <div>
+	          <apex:actionFunction name="sharePost" action="{!chatterVolunteerInterest}" onComplete="reloadPage();"/> 
+	          <input id="publishersharebutton" value="Share" class="zen-btn zen-highlightBtn" name="publishersharebutton" 
+	                 onclick="sharePost();" title="Share" type="button" style="float:right;font-family: Arial;font-size: 1.08em;background-color: #8ab529;border: 1px solid #6c8049;background-image: -ms-linear-gradient(top,#8AB529 0,#87AC31 100%);background-image: -moz-linear-gradient(top,#8AB529 0,#87AC31 100%);background-image: -webkit-linear-gradient(top,#8AB529 0,#87AC31 100%);background-image: linear-gradient(top,#8AB529 0,#87AC31 100%);display: inline-block;padding-top: 0;padding-bottom: 1px;padding-left: 10px;padding-right: 10px;height: 30px;color: #fff;-moz-border-radius: 3px;order-radius: 2px;-moz-box-shadow: 0 1px 2px 0 #adadad;-webkit-box-shadow: 0 1px 2px 0 #adadad;box-shadow: 0 1px 2px 0 #adadad;margin: 0;"/>
+	        </div> 
+	     </apex:outputPanel>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,871 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"NO",
+				"No_Prefix__c"
+			],
+			[
+				"male",
+				"maleConId"
+			],
+			[
+				"getuser",
+				"PUBLIC getUserId() 	String"
+			],
+			[
+				"Household_",
+				"PUBLIC HOUSEHOLD_FIRST_NAME	String"
+			],
+			[
+				"house",
+				"PUBLIC HOUSEHOLD_STANDARD_INFORMAL	String"
+			],
+			[
+				"hh",
+				"hhRecordTypeId"
+			],
+			[
+				"fiel",
+				"Field_name__c"
+			],
+			[
+				"accList",
+				"accList"
+			],
+			[
+				"De",
+				"DESC"
+			],
+			[
+				"populate",
+				"populateSuidOnAccount"
+			],
+			[
+				"SUI",
+				"SUID__c"
+			],
+			[
+				"suid",
+				"SUID__c 	Text"
+			],
+			[
+				"SUId",
+				"SUID__c 	Text"
+			],
+			[
+				"SUID",
+				"SUID__c 	Text"
+			],
+			[
+				"App",
+				"APP_Suffix__c"
+			],
+			[
+				"oldsal",
+				"oldSalMap"
+			],
+			[
+				"isU",
+				"isUpdated"
+			],
+			[
+				"Last",
+				"LastName"
+			],
+			[
+				"Contact",
+				"Contacts"
+			],
+			[
+				"is",
+				"isRecursive"
+			],
+			[
+				"stati",
+				"static"
+			],
+			[
+				"Cont",
+				"Contact"
+			],
+			[
+				"First",
+				"FirstName"
+			],
+			[
+				"salLine",
+				"salLine"
+			],
+			[
+				"ob",
+				"objName"
+			],
+			[
+				"p",
+				"Prof_Suffix__c 	Picklist"
+			],
+			[
+				"getF",
+				"getFirstName"
+			],
+			[
+				"middle",
+				"middleName"
+			],
+			[
+				"uti",
+				"SalutationUtility"
+			],
+			[
+				"SAL",
+				"SalutationUtility	[Custom Apex Class]"
+			],
+			[
+				"Saluta",
+				"SalutationUtility	[Custom Apex Class]"
+			],
+			[
+				"SObje",
+				"SObject	[Standard Apex Class]"
+			],
+			[
+				"acc",
+				"accName"
+			],
+			[
+				"sO",
+				"sObj"
+			],
+			[
+				"tcpu",
+				"tcpUtil"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/pages/SS_Contact_Reports.page",
+			"settings":
+			{
+				"buffer_size": 28323,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Development/MavensMateFinal WS/Stanford University",
+		"/D/Development/MavensMateFinal WS/Stanford University/src",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/pages"
+	],
+	"file_history":
+	[
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/CheckSubscriberExistOnOtherTeam.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/CheckSubscriberrExistOnOtherTeam.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/ContactService.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/triggers/ContactTrigger.trigger",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/AccountTriggerHandler.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/triggers/AccountTrigger.trigger",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SUID_GeneratorServiceAccountTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SalutationConstants.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/PreferenceTriggerHandler.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SalutationUtility.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/pages/SS_DisplayInteractionHistory.page",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SS_DisplayInteractionHistory_AC.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/MarriageComponentController.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/AddRelatedContacts.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/ChatterPostQuickActionController.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/BIO_LogACallControllerTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SalutationUtilityTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SalutationTriggerHandler.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/pages/BIO_LogACall.page",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/BIO_LogACallController.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/package.xml",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SalutationTriggerHandlerTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/ContactServiceTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/SUID_GeneratorService.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/AC_Utility.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/OpportunityTriggerHandler.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/IRConstants.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/profiles/Admin.profile",
+		"/D/Development/MavensMateFinal WS/Stanford University/Stanford University.sublime-project",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/approvalProcesses/Strategy__c.Solicitation_Strategy_2Step.approvalProcess",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/OpportunityTriggerHandlerTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/triggers/OpportunityTrigger.trigger",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/triggers/SalutationTrigger.trigger",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/PreferenceTriggerHandlerTest.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/AccountTriggerHandler.cls-meta.xml",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/AccountTriggerHelper.cls",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/classes/AccountTriggerHelper.cls-meta.xml",
+		"/C/Users/aditi/AppData/Roaming/Sublime Text 3/Packages/MavensMate/mavensmate.sublime-settings",
+		"/C/Users/aditi/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/Development/MavensMateFinal WS/Stanford University/src/triggers/PreferenceTrigger.trigger",
+		"/C/Users/aditi/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Development/MavensMateFinal WS/DevAppirioNov2015/src/permissionsets/Campaign_Admin.permissionset",
+		"/D/Development/MavensMateFinal WS/DevAppirioNov2015/src/profiles/CXO.profile",
+		"/D/Development/MavensMateFinal WS/DevAppirioNov2015/src/classes/BatchCreateSaturnCollections.cls",
+		"/C/Users/aditi/AppData/Roaming/Sublime Text 3/Packages/User/mavensmate.sublime-settings",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/permissionsets/Market_Assignment.permissionset",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/BatchUpdatePlannedPayment.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/BatchUpdatePlannedPaymentTest.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/workflows/Planned_Payment__c.workflow",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/BatchCreateSaturnCollections.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/profiles/CXO.profile",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/profiles/Admin.profile",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/IRConstants.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/SendEmailToCollectionContactTest.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/TouchPointsTriggerHelperTest.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/TouchPointsTriggerHelper.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/TouchPointsTriggerHandlerTest.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/TouchPointsTriggerHandler.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/CaseHelper.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/TouchPointUtility.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/AccountTriggerHelper.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/OpportunityTriggerHelper.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/NatoCaseStateTableTest.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/NationalOpsCaseStatusEditControllerTest.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/InitNationalCaseFields.cls",
+		"/D/Development/MavensMateFinal WS/DevAppirioLatest/src/classes/NatoCaseStateTable.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/CaseHelper.cls",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Product Specific Inquiry Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Product Change Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Account-CSS Customer.layout",
+		"/C/Users/aditi/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/aditi/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/profiles/IR Assignment.profile",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/profiles/IR Sales Non-Sales Support.profile",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Billing Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/applications/Account_Recovery_Console.app",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/applications/Retention.app",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/profiles/CXO.profile",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/profiles/Admin.profile",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Information Request Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Customer - Closed Loop Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Customer - Cancel Request Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/Case-Claims Feed Layout-CXO.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/classes/BatchUpdateOpportunityStage.cls",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/objects/Account_Attachments_Classification__c.object",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/objects/Event.object",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/layouts/TouchPoints__c-MC2 Post Sale.layout",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/permissionsets/Manage_Reports.permissionset",
+		"/D/Development/MavensMateFinal WS/devAppirioNew/src/permissionsets/Modify_All_Access_On_Leads.permissionset",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/profiles/Back Office.profile",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/CustomAttachment_Test.cls-meta.xml",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/FlowGetTimeZoneOffsetOfCurrentUser.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/CwsRestClient.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/BatchUpdateAccountRecovery.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/objects/Account_Recovery__c.object",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/BatchUpdateCollectionsActionStatus.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/BatchUpdateCollectionSteps.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/pages/IRCreateShellCustomer.page",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/IRCanvasController.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/pages/IRAdsellErrorPage.page",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/IRCreateOpportunity.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/BatchCreateSaturnCollections.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/customConvertLeadExtension.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/objects/Activity.object",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/layouts/Task-IR Telesales Delete.layout",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/layouts/Account_Recovery__c-National.layout",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/IRConstants.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/TouchPointsTriggerHelper.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/TouchPointUtility.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/IRRepAssignmentProcessingTest.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/layouts/Account-CSS Customer.layout",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/layouts/Account-Saturn - Customer - CXO.layout",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/layouts/Account-Local OOR Customer.layout",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/layouts/Case-Product Change Feed Layout.layout",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/OpportunityTriggerHelper.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/BatchUpdateOpportunityStage.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/RecordTypeHelper.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/classes/OpportunityTriggerHandler_Test.cls",
+		"/D/Development/MavensMateFinal WS/devappiroMetadata/src/objects/Opportunity.object",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/flows/Activity_Test-1.flow",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/layouts/Task-IR Telesales Delete.layout",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/layouts/Task-NS Task Layout.layout",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/layouts/Opportunity-IR Telesales Opportunity Layout.layout",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/objects/Activity.object",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/objects/Opportunity.object",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/layouts/Opportunity-Opportunity Layout.layout",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/flows/CreateTaskForCollections-20.flow",
+		"/D/Development/MavensMateFinal WS/Yp Metadata/src/classes/IRTelesalesEndCampaignTest.cls"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\Development\\MavensMateFinal WS\\Stanford University\\src",
+			"D:\\Development\\MavensMateFinal WS\\Stanford University\\src\\flows",
+			"D:\\Development\\MavensMateFinal WS\\Stanford University\\src,D:\\Development\\MavensMateFinal WS\\Stanford University\\src\\flows",
+			"D:\\Development\\MavensMateFinal WS\\Stanford University\\src",
+			"",
+			"D:\\Development\\MavensMateFinal WS\\Stanford University",
+			"D:\\Development\\MavensMateFinal WS\\devappiroMetadata\\src",
+			"D:\\Development\\MavensMateFinal WS\\devappiroMetadata\\src\\classes",
+			"D:\\Development\\MavensMateFinal WS\\Yp Metadata\\src\\flows",
+			"D:\\Development\\MavensMateFinal WS\\Yp Metadata\\src\\components",
+			"D:\\Development\\MavensMateFinal WS\\Yp Metadata\\src\\pages",
+			"D:\\Development\\MavensMateFinal WS\\Yp Metadata\\src\\triggers",
+			"D:\\Development\\MavensMateFinal WS\\YpPhase3\\src\\classesRecordTypeIDs__c"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tab-2",
+			"container mt75",
+			"teamList",
+			"history",
+			"total",
+			"generateNewSalutationUrl",
+			"updateContactMaritalStatus",
+			"delPreference",
+			"restrictDeletionOfCTFromOrgAccount",
+			"(pref.rC_Bios__Account__r.RecordTypeId == '0121a000000c0Rx'",
+			"contactHouseholdRecTypeId",
+			"gethouseholdSalLine1ForPrefLong",
+			"DisplayInteractionHistoryWrapper",
+			"updateContactMaritalStatus",
+			"SS_DisplayInteractionHistory_AC",
+			"getSuffix",
+			"secondContactAPIName",
+			"createCustomSettingTesData",
+			"getContactReportInfo",
+			"requestResearchRating",
+			"requestResearchpostToDisplay",
+			"jquery.min.js",
+			"getPrefix",
+			"No_Prefix__c",
+			"conMalePrefix",
+			"validateSuid",
+			"createLogActivity",
+			"validateSuid",
+			"System",
+			"validateSuid",
+			"error",
+			"getHouseholdPrefMailNameLong",
+			"getMiddleName",
+			"New_Engagement_Strategy ",
+			"New_Engagement_Strategy",
+			"Account_Required",
+			"Deceased_Source__c",
+			"isaut",
+			"validateSuidOnAccount",
+			"getAllSuidsForAccount",
+			"populateSuidOnAccount",
+			"onBeforeDelete",
+			"populateSuidOnAccount",
+			"isRecursive",
+			"isaut",
+			"getPrefix",
+			"Name",
+			"Inside",
+			"Salutation_Use__c",
+			"Household ",
+			"Household Stacked Name",
+			"tbickle@stanford.edu.dev1</name>",
+			"<name>Strategy_Update_Status_Approved</name>",
+			"Travis Bickle",
+			"subCategoryList",
+			"APP_Suffix__c",
+			"Suffix__c",
+			"actualRecord",
+			"rC_Bios__Primary__c",
+			"preferencesForUpdate",
+			"beforedelete",
+			"prefixMap.get('Mr.').Abbreviated_Prefix__c",
+			"rC_Bios__Gender__c == 'Male' ",
+			"rC_Bios__Gender__c == 'Male'",
+			"getContactPrefix",
+			"updateHouseHoldContacts",
+			"fetchRelatedContacts",
+			"updateHouseHoldContacts",
+			"fetchHouseholdContactsForFetchRelatedContacts",
+			"updatehousehold",
+			"upsert",
+			"stop",
+			"label.",
+			"updateHouseHoldContacts",
+			"calculateCTPrimary",
+			"accToHouseholdConMap",
+			"fetchHouseholdContacts",
+			"fetchR",
+			"fetchHouseholdContacts",
+			"contactsToUpdate",
+			"getAccIdToContactMap",
+			"LIMIT 1",
+			"mapAccIdandActiveContacts",
+			"checkActiveContacts",
+			"addError",
+			"etchRelatedContacts",
+			"Secondary",
+			"deceasedContactMap",
+			"gethousehold",
+			"secConMap",
+			"fetchRelatedContacts",
+			"accToHouseholdConMap",
+			"***** contact new List3",
+			"contactsToUpdate",
+			"contactToUpdate",
+			"contactsToUpdate",
+			"calculateCTPrimary",
+			"updateHouseHoldContacts",
+			"contactsToUpdate",
+			"CONSTITUENT_TYPE",
+			"FR",
+			"fetchRelatedContacts",
+			"updateHouseHoldContacts",
+			"calculateCTPrimary",
+			"householdAccountIdToContactMap",
+			"fetchRelatedContacts",
+			"Suffix__c",
+			"No_Prefix__c",
+			"suffix__c",
+			"APP_Suffix__c",
+			"suffix__c",
+			"/*",
+			"suffix__c",
+			"'suffix__c'",
+			"suffix__c",
+			"Organization Pref Mail Name",
+			"isRecursive",
+			"contactNewList",
+			"fetchRelatedContacts",
+			"contactNewList",
+			"fetchRelatedContacts",
+			"contactNewList",
+			"accMap",
+			"prefMap",
+			"subCategoryList",
+			"getAccountName",
+			"objName",
+			"isEmpty"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/pages/SS_Contact_Reports.page",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9055,
+								9055
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1170.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Stanford University.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"batchcreate",
+				"src\\classes\\BatchCreateSaturnCollections.cls"
+			],
+			[
+				"batchupdatepl",
+				"src\\classes\\BatchUpdatePlannedPaymentTest.cls"
+			],
+			[
+				"irconstant",
+				"src\\classes\\IRConstants.cls"
+			],
+			[
+				"batchcreatesaturncollections",
+				"src\\classes\\BatchCreateSaturnCollections.cls"
+			],
+			[
+				"sendemailtocollectioncontacttest",
+				"src\\classes\\SendEmailToCollectionContactTest.cls"
+			],
+			[
+				"touchpointtrigger",
+				"src\\classes\\TouchPointsTriggerHelperTest.cls"
+			],
+			[
+				"touchpoin",
+				"src\\classes\\TouchPointsTriggerHandlerTest.cls"
+			],
+			[
+				"touchpoint",
+				"src\\classes\\TouchPointsTriggerHelper.cls"
+			],
+			[
+				"ircon",
+				"src\\classes\\IRConstants.cls"
+			],
+			[
+				"touch",
+				"src\\classes\\TouchPointUtility.cls"
+			],
+			[
+				"opportunitytrigger",
+				"src\\classes\\OpportunityTriggerHelper.cls"
+			],
+			[
+				"case",
+				"src\\classes\\CaseHelper.cls"
+			],
+			[
+				"accounttrigger",
+				"src\\classes\\AccountTriggerHelper.cls"
+			],
+			[
+				"touchpointhandler",
+				"src\\classes\\TouchPointsTriggerHandler.cls"
+			],
+			[
+				"initnationalcasefields.cls",
+				"src\\classes\\InitNationalCaseFields.cls"
+			],
+			[
+				"nationalopscasestatuseditcontrollertest",
+				"src\\classes\\NationalOpsCaseStatusEditControllerTest.cls"
+			],
+			[
+				"initnat",
+				"src\\classes\\InitNationalCaseFields.cls"
+			],
+			[
+				"nato",
+				"src\\classes\\NatoCaseStateTable.cls"
+			],
+			[
+				"natocasestatetabletest",
+				"src\\classes\\NatoCaseStateTableTest.cls"
+			],
+			[
+				"batchupdate",
+				"src\\classes\\BatchUpdateOpportunityStage.cls"
+			],
+			[
+				"modify_",
+				"src\\permissionsets\\Modify_All_Access_On_Leads.permissionset"
+			],
+			[
+				"flow",
+				"src\\classes\\FlowGetTimeZoneOffsetOfCurrentUser.cls"
+			],
+			[
+				"batchupdatecoll",
+				"src\\classes\\BatchUpdateCollectionsActionStatus.cls"
+			],
+			[
+				"batchupdateaccount",
+				"src\\classes\\BatchUpdateAccountRecovery.cls"
+			],
+			[
+				"batchcreats",
+				"src\\classes\\BatchCreateSaturnCollections.cls"
+			],
+			[
+				"irads",
+				"src\\pages\\IRAdsellErrorPage.page"
+			],
+			[
+				"ircreate",
+				"src\\classes\\IRCreateOpportunity.cls"
+			],
+			[
+				"ircanvass",
+				"src\\classes\\IRCanvasController.cls"
+			],
+			[
+				"customconvert",
+				"src\\classes\\customConvertLeadExtension.cls"
+			],
+			[
+				"batch",
+				"src\\classes\\BatchCreateSaturnCollections.cls"
+			],
+			[
+				"casehelper",
+				"src\\classes\\CaseHelper.cls"
+			],
+			[
+				"irrepassignment",
+				"src\\classes\\IRRepAssignmentProcessingTest.cls"
+			],
+			[
+				"record",
+				"src\\classes\\RecordTypeHelper.cls"
+			],
+			[
+				"opportunity",
+				"src\\objects\\Opportunity.object"
+			],
+			[
+				"opportunity-irt",
+				"src\\layouts\\Opportunity-IR Telesales Opportunity Layout.layout"
+			],
+			[
+				"task-ir",
+				"src\\layouts\\Task-IR Telesales Delete.layout"
+			],
+			[
+				"task.n",
+				"src\\layouts\\Task-NS Task Layout.layout"
+			],
+			[
+				"activity",
+				"src\\objects\\Activity.object"
+			],
+			[
+				"irtelesalesendcampaigntest.cls",
+				"src\\classes\\IRTelesalesEndCampaignTest.cls"
+			],
+			[
+				"irdispositionle_test.cls",
+				"src\\classes\\IRDispositionLe_Test.cls"
+			],
+			[
+				"oppotunity",
+				"src\\objects\\Opportunity.object"
+			],
+			[
+				"opportunity.i",
+				"src\\layouts\\Opportunity-IR Opportunity Layout.layout"
+			],
+			[
+				"opportunity.",
+				"src\\layouts\\Opportunity-Saturn-Opportunity.layout"
+			],
+			[
+				"createo",
+				"src\\classes\\CreateOpportunityOnAccountFlowTest.cls"
+			],
+			[
+				"",
+				"src\\classes\\CreateOpportunityOnAccountFlowControllerTest"
+			],
+			[
+				"createopp",
+				"src\\classes\\CreateOpportunityOnAccountFlowControllerTest"
+			],
+			[
+				"create",
+				"src\\classes\\CreateOpportunityOnAccountFlowController.cls"
+			],
+			[
+				"opportunitytriggerh",
+				"src\\classes\\OpportunityTriggerHandler_Test.cls"
+			],
+			[
+				"irconstact",
+				"src\\classes\\IRConstants.cls"
+			],
+			[
+				"opportunty",
+				"src\\classes\\OpportunityTriggerHelper.cls"
+			],
+			[
+				"tou",
+				"src\\classes\\TouchPointUtilityTest.cls"
+			],
+			[
+				"toucpoint",
+				"src\\classes\\TouchPointUtilityTest.cls"
+			],
+			[
+				"batchcreatetouch",
+				"src\\classes\\BatchCreateTouchPointOnAccountTest.cls"
+			],
+			[
+				"batchcre",
+				"src\\classes\\BatchCreateTouchPointOnAccount.cls"
+			],
+			[
+				"batchc",
+				"src\\classes\\BatchCreateTouchPointOnAccount.cls"
+			],
+			[
+				"batchcreateto",
+				"src\\classes\\BatchCreateTouchPointOnAccountTest.cls"
+			],
+			[
+				"opportunitytriggerhandlet",
+				"src\\classes\\OpportunityTriggerHandler_Test.cls"
+			],
+			[
+				"opportunitytriggerhe",
+				"src\\classes\\OpportunityTriggerHelper.cls"
+			],
+			[
+				"opportunitytriggerhelper",
+				"src\\classes\\OpportunityTriggerHelper.cls"
+			],
+			[
+				"ircons",
+				"src\\classes\\IRConstants.cls"
+			],
+			[
+				"recordtype",
+				"src\\classes\\RecordTypeHelper.cls"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 344.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

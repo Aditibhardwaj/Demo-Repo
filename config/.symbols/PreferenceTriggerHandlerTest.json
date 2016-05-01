@@ -1,0 +1,522 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contacts", 
+            "visibility": "PRIVATE", 
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 106
+                }, 
+                {
+                    "column": 14, 
+                    "line": 127
+                }
+            ], 
+            "location": {
+                "column": 34, 
+                "line": 3
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "prefManagedRecTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [
+                {
+                    "column": 119, 
+                    "line": 41
+                }, 
+                {
+                    "column": 27, 
+                    "line": 67
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 4
+            }, 
+            "type": "Id"
+        }
+    ], 
+    "externalReferences": [
+        {
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 58
+                }, 
+                {
+                    "column": 7, 
+                    "line": 90
+                }
+            ], 
+            "variables": [], 
+            "namespace": "System", 
+            "methods": [
+                {
+                    "returnType": null, 
+                    "references": [
+                        {
+                            "column": 12, 
+                            "line": 58
+                        }
+                    ], 
+                    "name": "startTest", 
+                    "parameters": [], 
+                    "argTypes": []
+                }, 
+                {
+                    "returnType": null, 
+                    "references": [
+                        {
+                            "column": 12, 
+                            "line": 90
+                        }
+                    ], 
+                    "name": "stopTest", 
+                    "parameters": [], 
+                    "argTypes": []
+                }
+            ], 
+            "name": "Test"
+        }, 
+        {
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 70
+                }, 
+                {
+                    "column": 7, 
+                    "line": 76
+                }, 
+                {
+                    "column": 7, 
+                    "line": 82
+                }
+            ], 
+            "variables": [
+                {
+                    "references": [
+                        {
+                            "column": 32, 
+                            "line": 70
+                        }, 
+                        {
+                            "column": 32, 
+                            "line": 76
+                        }, 
+                        {
+                            "column": 32, 
+                            "line": 82
+                        }
+                    ], 
+                    "name": "isPrimaryOnly"
+                }
+            ], 
+            "namespace": null, 
+            "methods": [], 
+            "name": "PreferenceTriggerHandler"
+        }
+    ], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "PreferenceTriggerHandlerTest", 
+    "tableDeclaration": {
+        "type": "PreferenceTriggerHandlerTest", 
+        "modifiers": [
+            "private", 
+            "testMethod"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 15, 
+            "line": 2
+        }, 
+        "name": "PreferenceTriggerHandlerTest"
+    }, 
+    "key": "01p63000000CglwAAC", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 40
+                }, 
+                {
+                    "column": 14, 
+                    "line": 59
+                }, 
+                {
+                    "column": 7, 
+                    "line": 71
+                }, 
+                {
+                    "column": 14, 
+                    "line": 74
+                }
+            ], 
+            "location": {
+                "column": 37, 
+                "line": 39
+            }, 
+            "name": "preferences"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 62
+                }, 
+                {
+                    "column": 7, 
+                    "line": 63
+                }, 
+                {
+                    "column": 7, 
+                    "line": 64
+                }, 
+                {
+                    "column": 7, 
+                    "line": 65
+                }, 
+                {
+                    "column": 7, 
+                    "line": 66
+                }, 
+                {
+                    "column": 7, 
+                    "line": 67
+                }, 
+                {
+                    "column": 14, 
+                    "line": 68
+                }
+            ], 
+            "location": {
+                "column": 30, 
+                "line": 61
+            }, 
+            "name": "pref"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 21, 
+                    "line": 78
+                }, 
+                {
+                    "column": 70, 
+                    "line": 78
+                }, 
+                {
+                    "column": 7, 
+                    "line": 81
+                }, 
+                {
+                    "column": 55, 
+                    "line": 81
+                }, 
+                {
+                    "column": 14, 
+                    "line": 83
+                }, 
+                {
+                    "column": 148, 
+                    "line": 85
+                }, 
+                {
+                    "column": 97, 
+                    "line": 88
+                }
+            ], 
+            "location": {
+                "column": 36, 
+                "line": 77
+            }, 
+            "name": "resultPreferences"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 14, 
+                    "line": 87
+                }, 
+                {
+                    "column": 7, 
+                    "line": 88
+                }
+            ], 
+            "location": {
+                "column": 36, 
+                "line": 85
+            }, 
+            "name": "updateResults"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 97
+                }, 
+                {
+                    "column": 7, 
+                    "line": 100
+                }, 
+                {
+                    "column": 7, 
+                    "line": 103
+                }, 
+                {
+                    "column": 14, 
+                    "line": 104
+                }
+            ], 
+            "location": {
+                "column": 21, 
+                "line": 94
+            }, 
+            "name": "accList"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 19, 
+                    "line": 97
+                }, 
+                {
+                    "column": 94, 
+                    "line": 108
+                }, 
+                {
+                    "column": 123, 
+                    "line": 117
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 96
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 19, 
+                    "line": 100
+                }, 
+                {
+                    "column": 93, 
+                    "line": 109
+                }, 
+                {
+                    "column": 94, 
+                    "line": 111
+                }, 
+                {
+                    "column": 93, 
+                    "line": 112
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 99
+            }, 
+            "name": "acc1"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 19, 
+                    "line": 103
+                }, 
+                {
+                    "column": 94, 
+                    "line": 114
+                }, 
+                {
+                    "column": 93, 
+                    "line": 115
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 102
+            }, 
+            "name": "acc2"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 119
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 108
+            }, 
+            "name": "cnt1"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 120
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 109
+            }, 
+            "name": "cnt2"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 121
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 111
+            }, 
+            "name": "cnt3"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 122
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 112
+            }, 
+            "name": "cnt4"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 123
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 114
+            }, 
+            "name": "cnt5"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 124
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 115
+            }, 
+            "name": "cnt6"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 20, 
+                    "line": 125
+                }
+            ], 
+            "location": {
+                "column": 15, 
+                "line": 117
+            }, 
+            "name": "cnt7"
+        }
+    ], 
+    "id": "01p63000000CglwAAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "testMethod"
+            ], 
+            "name": "testPreferences", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 37
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "createTestData", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [
+                {
+                    "column": 7, 
+                    "line": 38
+                }
+            ], 
+            "location": {
+                "column": 25, 
+                "line": 93
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

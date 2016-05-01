@@ -1,0 +1,292 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "SUID_GeneratorService", 
+    "tableDeclaration": {
+        "type": "SUID_GeneratorService", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 8
+        }, 
+        "name": "SUID_GeneratorService"
+    }, 
+    "key": "01p63000000D3m9AAC", 
+    "variables": [
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 13
+            }, 
+            "name": "poolValue"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 61, 
+                "line": 13
+            }, 
+            "name": "leadingDigit"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 14
+            }, 
+            "name": "intDigitSum"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 15
+            }, 
+            "name": "poolValueLength"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 16
+            }, 
+            "name": "index"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 17
+            }, 
+            "name": "stringDigit"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 18
+            }, 
+            "name": "intDigit"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 22
+            }, 
+            "name": "intDigitNewSum"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 31
+            }, 
+            "name": "suId"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 33
+            }, 
+            "name": "index"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 43
+            }, 
+            "name": "digit"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 69, 
+                "line": 43
+            }, 
+            "name": "position"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 44
+            }, 
+            "name": "integerMultiplier"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 44
+            }, 
+            "name": "intDigitValue"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 61, 
+                "line": 61
+            }, 
+            "name": "SUID"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 75, 
+                "line": 61
+            }, 
+            "name": "isAccount"
+        }, 
+        {
+            "type": "Decimal", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 63
+            }, 
+            "name": "suid_Numeric"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 69
+            }, 
+            "name": "suidWithoutLeadingDigit"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 70
+            }, 
+            "name": "generatedSUID"
+        }
+    ], 
+    "id": "01p63000000D3m9AAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "getNextSUID", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "poolValue"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "leadingDigit"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 13
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "calculateCheckDigit", 
+            "parameters": [
+                {
+                    "type": "Integer", 
+                    "name": "digit"
+                }, 
+                {
+                    "type": "Integer", 
+                    "name": "position"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 43
+            }, 
+            "returnType": "Integer", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isValidSUIDbasedonCheckDigit", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "SUID"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isAccount"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 61
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }
+    ]
+}

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>T-479704</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>false</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>false</enableStreamingApi>
+    <fields>
+        <fullName>Academic_Program__c</fullName>
+        <description>T-479704</description>
+        <externalId>false</externalId>
+        <label>Academic Program</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unrestricted</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scholarship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>T-479704</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Endowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>T-479704</description>
+        <externalId>false</externalId>
+        <label>Endowed</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expendable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>T-479704</description>
+        <externalId>false</externalId>
+        <label>Expendable</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Known_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Known Amount</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Giving__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-479704</description>
+        <externalId>false</externalId>
+        <label>Planned Giving</label>
+        <referenceTo>rC_Giving__Planned_Giving__c</referenceTo>
+        <relationshipLabel>Purposes</relationshipLabel>
+        <relationshipName>Purposes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Unknown_Amount_Estimate__c</fullName>
+        <externalId>false</externalId>
+        <label>Unknown Amount/Estimate</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No Indication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate $1,000-$99,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate $100,000-$499,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate $500,000-$999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate $1,000,000-$9,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate $10,000,000+</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Purposes</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Purpose-{000000}</displayFormat>
+        <label>Purposes Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Purposes</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Planned_Giving</fullName>
+        <active>true</active>
+        <description>T-479704</description>
+        <label>Planned Giving</label>
+        <picklistValues>
+            <picklist>Academic_Program__c</picklist>
+            <values>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Unknown_Amount_Estimate__c</picklist>
+            <values>
+                <fullName>Estimate %241%2C000%2C000-%249%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estimate %241%2C000-%2499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estimate %2410%2C000%2C000%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estimate %24100%2C000-%24499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estimate %24500%2C000-%24999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Indication</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Validate_Known_and_Unknown_Amount</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+     NOT( ISBLANK( TEXT( Unknown_Amount_Estimate__c ))) ,
+     NOT( ISBLANK( Known_Amount__c ) )
+     )</errorConditionFormula>
+        <errorMessage>Known and Unknown Amount cannot be chosen together.</errorMessage>
+    </validationRules>
+</CustomObject>

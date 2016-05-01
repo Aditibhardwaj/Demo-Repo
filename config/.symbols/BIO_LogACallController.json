@@ -1,0 +1,298 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "sobjTask", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 12
+            }, 
+            "type": "Task"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "contactSuid", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 13
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "BIO_LogACallController", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 16
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "BIO_LogACallController", 
+    "tableDeclaration": {
+        "type": "BIO_LogACallController", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "BIO_LogACallController"
+    }, 
+    "key": "01p63000000D9jzAAC", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 34
+            }, 
+            "name": "suidList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 35
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 37
+            }, 
+            "name": "suidMap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 44
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 63
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "Task", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 8, 
+                "line": 64
+            }, 
+            "name": "clonedTask"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 65
+            }, 
+            "name": "newTaskList"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 66
+            }, 
+            "name": "conId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 76
+            }, 
+            "name": "taskResult"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 88
+            }, 
+            "name": "suidMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 71, 
+                "line": 88
+            }, 
+            "name": "suidList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 89
+            }, 
+            "name": "suidsNotFound"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 91
+            }, 
+            "name": "suid"
+        }, 
+        {
+            "type": "Message", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 105
+            }, 
+            "name": "myMsg"
+        }
+    ], 
+    "id": "01p63000000D9jzAAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "setTaskDefaultData", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 24
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onSave", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 33
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onCancel", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 58
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "createLogActivity", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "conIdSet"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 63
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "validateSuid", 
+            "parameters": [
+                {
+                    "type": "Map", 
+                    "name": "suidMap"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "suidList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 88
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }
+    ]
+}

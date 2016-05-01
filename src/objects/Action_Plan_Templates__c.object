@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>This custom will holds name of action plan templates.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Acknowledgement_Letter_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Acknowledgement Letter Request</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Membership_Invitation_Welcome_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Membership Invitation/Welcome Request</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Action Plan Templates</label>
+</CustomObject>

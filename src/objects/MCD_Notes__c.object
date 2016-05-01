@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>MCD HIPAA Security model S-352518</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>false</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>false</enableStreamingApi>
+    <fields>
+        <fullName>Contact_Report_Notes__c</fullName>
+        <defaultValue>&quot;HIPAA Protected comments&quot;</defaultValue>
+        <description>Comments with sensitive information related to an interaction with the prospect</description>
+        <externalId>false</externalId>
+        <label>Contact Report Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Report__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Report</label>
+        <referenceTo>Contact_Report__c</referenceTo>
+        <relationshipLabel>MCD Notes</relationshipLabel>
+        <relationshipName>MCD_Notes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Strategy_Notes__c</fullName>
+        <defaultValue>&quot;HIPAA Protected comments&quot;</defaultValue>
+        <description>Comments with sensitive information related to prospect solicitation strategy</description>
+        <externalId>false</externalId>
+        <label>Strategy Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Strategy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Strategy</label>
+        <referenceTo>Strategy__c</referenceTo>
+        <relationshipLabel>MCD Notes</relationshipLabel>
+        <relationshipName>MCD_Notes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>MCD Note</label>
+    <nameField>
+        <displayFormat>MCDN-{000000000}</displayFormat>
+        <label>MCD Note</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>MCD Notes</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Contact_Report</fullName>
+        <active>true</active>
+        <description>T-480587POC</description>
+        <label>Contact Report</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Strategy</fullName>
+        <active>true</active>
+        <description>T-480587POC</description>
+        <label>Strategy</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

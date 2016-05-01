@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/zip</contentType>
+    <description>css/fonts/js files for custom sf1 mobile pages (style.css, bootstrap 3, fontawesome)</description>
+</StaticResource>

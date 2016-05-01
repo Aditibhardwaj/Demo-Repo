@@ -1,0 +1,46 @@
+<apex:page StandardController="contact"  extensions="SS_DisplayInteractionHistory_AC" sidebar="false" tabStyle="Contact" >
+  <apex:form >
+    <apex:sectionHeader title="Interaction History" />
+    <apex:pageBlock id="thePageBlock">
+     
+        <apex:pageMessages />
+        
+            <apex:outputPanel rendered="{!contactIntractionHistoryList.size = 0 }">
+            {!$Label.INTERACTION_HISTORY_MESSAGE}
+            </apex:outputPanel>
+          <apex:pageBlockTable value="{!contactIntractionHistoryList}" columns="5" var="interaction" rendered="{!contactIntractionHistoryList.size >0 }">
+            <apex:column >
+                <apex:facet name="header">Interaction Type</apex:facet>
+                <apex:outputLink value="/{!interaction.recordId}">{!interaction.recordType}</apex:outputLink>
+            </apex:column>         
+            <apex:column >
+                <apex:facet name="header">Type</apex:facet>
+                {!interaction.type}
+            </apex:column>
+            
+              <apex:column >
+                <apex:facet name="header">Date</apex:facet>
+                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                    <apex:param value="{!interaction.interactionDate}" /> 
+                                </apex:outputText>
+                
+            </apex:column> 
+            <apex:column >
+                <apex:facet name="header"> Author</apex:facet>
+                {!interaction.author}
+                
+                
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Purpose</apex:facet>
+                {!interaction.purpose}
+            </apex:column>
+            
+                        
+         </apex:pageBlockTable>
+          
+            
+         </apex:pageBlock>
+ </apex:form>
+
+</apex:page>

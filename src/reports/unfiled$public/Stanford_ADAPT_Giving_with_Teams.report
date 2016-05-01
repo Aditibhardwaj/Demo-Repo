@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>o</joinTable>
+        </blockInfo>
+        <columns>
+            <field>MEMBER_NAME</field>
+        </columns>
+        <columns>
+            <field>MEMBER_ROLE</field>
+        </columns>
+        <format>Summary</format>
+        <name>Giving with Giving Teams and Str block 1</name>
+        <params>
+            <name>include</name>
+            <value>all</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>OpportunityTeam@Opportunity.Strategy__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>CREATED_DATE</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>o</joinTable>
+        </blockInfo>
+        <columns>
+            <field>FIRST_NAME</field>
+        </columns>
+        <columns>
+            <field>LAST_NAME</field>
+        </columns>
+        <columns>
+            <field>ROLE</field>
+        </columns>
+        <format>Summary</format>
+        <name>Giving with Contact Roles block 2</name>
+        <params>
+            <name>include</name>
+            <value>all</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>OpportunityContact</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>CREATED_DATE</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>o</joinTable>
+    </blockInfo>
+    <description>Show GIVING TEAMS along with Contact reports * * JOINED * *</description>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPPORTUNITY.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Stanford ADAPT Giving with Teams</name>
+    <params>
+        <name>lsk</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityTeam@Opportunity.Strategy__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

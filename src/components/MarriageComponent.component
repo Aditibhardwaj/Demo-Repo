@@ -1,0 +1,103 @@
+<apex:component controller="MarriageComponentController" allowDML="true">
+<apex:attribute type="Contact" name="value" assignTo="{!contactRecord}" description="Value to pass into the controller"/>   
+    
+  <script>
+      
+      function fetchDetails(){
+         
+         fetchContactDetails(); 
+         
+         
+      }
+      
+     
+      
+      
+      function findContact(){
+          var checkBoxValue = jQuery('.ActiveContactCheckBox').is(':checked');
+          findContacts(checkBoxValue);
+      }
+      
+      
+      jQuery(document).ready(function() {
+          var checkBoxValue = jQuery('.ActiveContactCheckBox').is(':checked');
+          findContacts(checkBoxValue);
+
+      });
+      
+  </script>
+  
+  
+  <apex:form id="theForm">
+      <apex:pageMessages id="pageMessage"></apex:pageMessages>
+     <!-- <apex:actionFunction action="{!fetchspouseDetails}" name="fetchContactDetails"  oncomplete="alert('hi');" /> -->
+          
+     
+      <apex:actionFunction action="{!findExistingContact}" name="findContacts" rerender="theForm" immediate="true"> 
+        <apex:param name="p1" value="" assignTo="{!checkContact}"/>
+      </apex:actionFunction>
+      
+      
+     
+  
+ 
+      
+                <div id="inputPanel">
+                         <apex:pageblock mode="maindetail" id="newContactPanel">    
+                                  <apex:pageBlockSection title="Spouse Information" collapsible="false">
+                                   
+                                  <apex:repeat value="{!fields}" var="f">
+                                         <apex:inputField value="{!cont[f.fieldPath]}" rendered="{!IF(f.Label != 'Marital Status', true, false)}"  />
+                                         <apex:outputField value="{!cont[f.fieldPath]}" rendered="{!IF(f.Label == 'Marital Status', true, false)}" /> 
+                                  </apex:repeat>
+                              </apex:pageBlockSection>
+                                
+                          </apex:pageblock>
+                 
+                          <apex:commandButton action="{!saveOnClick}" value="Save" style="margin-left:40%" rerender="newContactPanel, pageMessage"/>
+                          <apex:commandButton action="{!cancelOnClick}" value="Cancel" immediate="true"/>
+                     
+                     
+                </div>        
+                <br/>
+
+                    
+                  <apex:outputPanel id="detailBlock" >
+                     
+                        <apex:pageBlock mode="maindetail" id="existingContactPanel">
+                          <apex:pageBlockSection columns="2" collapsible="false" title="Spouse Information">
+                              <apex:pageBlockSectionItem >
+                                  <apex:outputLabel value="Spouse:"/>
+                                  <apex:actionRegion >
+                                      <apex:inputField value="{!cont.ReportsToId}"  > 
+                                          <apex:actionSupport action="{!fetchspouseDetails}" event="onselect" rerender="detailBlock" status="status"/>
+                                      </apex:inputField>
+                                  </apex:actionRegion>
+                              </apex:pageBlockSectionItem>
+                              <apex:pageBlockSectionItem ><apex:outputPanel ></apex:outputPanel></apex:pageBlockSectionItem>
+                              <apex:outputField value="{!detailContact.SUID__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Work_Phone__c}" />
+                              <apex:outputField value="{!detailContact.Account.Name}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Work_Email__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Gender__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Active__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Marital_Status__c}" />
+                           </apex:pageBlockSection>    
+                       <apex:commandButton action="{!saveForExistingContact}" value="Save" style="margin-left:40%" rerender="existingContactPanel, pageMessage" immediate="true"/>
+                       <apex:commandButton action="{!cancelOnClick}" value="Cancel" immediate="true"/>
+                    </apex:pageBlock>
+                </apex:outputPanel>
+            
+            
+            <div style="padding-bottom:2%"></div>
+            
+             
+            
+            
+            
+  
+  
+  </apex:form>
+
+  
+</apex:component>

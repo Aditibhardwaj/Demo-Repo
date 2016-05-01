@@ -1,0 +1,127 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "AccountTriggerHelper", 
+    "tableDeclaration": {
+        "type": "AccountTriggerHelper", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "AccountTriggerHelper"
+    }, 
+    "key": "01p63000000CjarAAC", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 10
+            }, 
+            "name": "accList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 12
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 13
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 14
+            }, 
+            "name": "sal1"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 15
+            }, 
+            "name": "accName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 16
+            }, 
+            "name": "accName1"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 17
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 62
+            }, 
+            "name": "salutationResult"
+        }
+    ], 
+    "id": "01p63000000CjarAAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "createChildSalutation", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "accList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 10
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

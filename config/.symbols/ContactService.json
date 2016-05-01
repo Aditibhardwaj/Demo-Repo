@@ -1,0 +1,1846 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "CONSTITUENT_TYPE", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 3
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contactsToUpdate", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 4
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contactHouseholdRecTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 5
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "stopRecursion", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 6
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isRecursiveAfterInsert", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 7
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isRecursiveAfterUpdate", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 8
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isRecursiveBeforeInsert", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 9
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isRecursiveBeforeUpdate", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 10
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isRecursive", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 11
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isSecondary", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 12
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isAutomaticUpdate", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 14
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "prefixMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 15
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "householdAccountIdToContactMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 39, 
+                "line": 17
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contactMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 30
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapAccIdandActiveContacts", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 32
+            }, 
+            "type": "Map"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "ContactService", 
+    "tableDeclaration": {
+        "type": "ContactService", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "ContactService"
+    }, 
+    "key": "01p63000000CgcBAAS", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 36
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 38
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 67
+            }, 
+            "name": "accIds"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 75, 
+                "line": 67
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 68
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 76
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 52, 
+                "line": 85
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 93
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 94
+            }, 
+            "name": "salHouseHoldList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 95
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 96
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 111
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 121
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 136
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 86, 
+                "line": 136
+            }, 
+            "name": "contactOldMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 137
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 146
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 52, 
+                "line": 177
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 85, 
+                "line": 177
+            }, 
+            "name": "contactOldMap"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 179
+            }, 
+            "name": "deceasedContactMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 180
+            }, 
+            "name": "accIdsToBeUpdated"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 181
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 185
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 186
+            }, 
+            "name": "householdConList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 187
+            }, 
+            "name": "SalutationList"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 188
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 189
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 215
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 221
+            }, 
+            "name": "contactToCreateSalList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 222
+            }, 
+            "name": "newHouseHoldSalList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 223
+            }, 
+            "name": "accIdSet"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 225
+            }, 
+            "name": "coId"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 228
+            }, 
+            "name": "accMap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 241
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 290
+            }, 
+            "name": "salutationResults"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 295
+            }, 
+            "name": "listToProcess"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 297
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 319
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 335
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 358
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 52, 
+                "line": 373
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 374
+            }, 
+            "name": "deceasedContactMap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 381
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 63, 
+                "line": 396
+            }, 
+            "name": "accIds"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 397
+            }, 
+            "name": "accToBeUpdated"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 398
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 64, 
+                "line": 404
+            }, 
+            "name": "deceasedContactMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 98, 
+                "line": 404
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 409
+            }, 
+            "name": "contactToupdate"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 410
+            }, 
+            "name": "accId"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 412
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 434
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 437
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 441
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 85, 
+                "line": 455
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 457
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 460
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 473
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 84, 
+                "line": 473
+            }, 
+            "name": "isBefore"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 475
+            }, 
+            "name": "newMap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 476
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 481
+            }, 
+            "name": "accIds"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 482
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 486
+            }, 
+            "name": "accIdToContactMap"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 76, 
+                "line": 502
+            }, 
+            "name": "accIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 503
+            }, 
+            "name": "accIdToContactMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 504
+            }, 
+            "name": "alums"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 505
+            }, 
+            "name": "biosCodes"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 507
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 76, 
+                "line": 528
+            }, 
+            "name": "accIdToContactMap"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 529
+            }, 
+            "name": "accId"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 532
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 540
+            }, 
+            "name": "cnt1"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 541
+            }, 
+            "name": "cnt2"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 585
+            }, 
+            "name": "primaryContact"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 86, 
+                "line": 585
+            }, 
+            "name": "secondaryContact"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 599
+            }, 
+            "name": "contactNewList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 88, 
+                "line": 599
+            }, 
+            "name": "oldContactMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 611
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 612
+            }, 
+            "name": "suidIdSet"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 613
+            }, 
+            "name": "isValid"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 614
+            }, 
+            "name": "suidSet"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 615
+            }, 
+            "name": "suidCountMap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 617
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 632
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 63, 
+                "line": 655
+            }, 
+            "name": "suidSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 65, 
+                "line": 656
+            }, 
+            "name": "newConList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 657
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 658
+            }, 
+            "name": "suidIdSet"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 659
+            }, 
+            "name": "accIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 660
+            }, 
+            "name": "accountList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 678
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 682
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 63, 
+                "line": 706
+            }, 
+            "name": "newList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 709
+            }, 
+            "name": "accountIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 711
+            }, 
+            "name": "upDateToContact"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 712
+            }, 
+            "name": "mapOfAccountToRelationCount"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 713
+            }, 
+            "name": "contactIdToRelationShip"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 714
+            }, 
+            "name": "realtionToBuild"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 715
+            }, 
+            "name": "accountIdToContactList"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 716
+            }, 
+            "name": "relationShipRecordtypeId"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 718
+            }, 
+            "name": "cont"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 726
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 737
+            }, 
+            "name": "str"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 739
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 742
+            }, 
+            "name": "con2"
+        }, 
+        {
+            "type": "rC_Bios__Relationship__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 44, 
+                "line": 747
+            }, 
+            "name": "rc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 776
+            }, 
+            "name": "conlist"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 777
+            }, 
+            "name": "contactToContactRelationship"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 778
+            }, 
+            "name": "accountToContactRelationship"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 779
+            }, 
+            "name": "contactIds"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 41, 
+                "line": 780
+            }, 
+            "name": "relationshipToInactive"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 781
+            }, 
+            "name": "contactToContactRole"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 783
+            }, 
+            "name": "AccountToContactRole"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 793
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "rC_Bios__Relationship__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 39, 
+                "line": 805
+            }, 
+            "name": "relation"
+        }
+    ], 
+    "id": "01p63000000CgcBAAS", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "resetIsRecursive", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 22
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onBeforeInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 36
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "checkActiveContacts", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "accIds"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 67
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onAfterInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 85
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onBeforeUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "contactOldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 136
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onAfterUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "contactOldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 177
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onAfterDelete", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 373
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "updatedAccountPreferContacts", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "accIds"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 396
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "setPrimaryContact", 
+            "parameters": [
+                {
+                    "type": "Map", 
+                    "name": "deceasedContactMap"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 404
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "fetchHouseholdContacts", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 434
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "fetchHouseholdContactsForFetchRelatedContacts", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 455
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "fetchRelatedContacts", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isBefore"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 473
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "getAccIdToContactMap", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "accIds"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 47, 
+                "line": 502
+            }, 
+            "returnType": "Map", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "updateHouseHoldContacts", 
+            "parameters": [
+                {
+                    "type": "Map", 
+                    "name": "accIdToContactMap"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 528
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "setContactPrimaryOrSecondary", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "primaryContact"
+                }, 
+                {
+                    "type": "Contact", 
+                    "name": "secondaryContact"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 585
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onBeforeDelete", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactNewList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldContactMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 599
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "validateSuidOnContact", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "conList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 611
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "getAllSuidsForContact", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "suidSet"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "newConList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 655
+            }, 
+            "returnType": "Set", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "updateContactMaritalStatus", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "newList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 706
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "updateDecesedContact", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "conlist"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 776
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

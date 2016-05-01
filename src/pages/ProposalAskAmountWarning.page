@@ -1,0 +1,13 @@
+<apex:page StandardController="Opportunity" tabStyle="Opportunity" sidebar="false" standardStyleSheets="true" showHeader="false" id="AlertPage">
+<script type="text/javascript">
+{
+// 2/6/16 Dan Weiss; T-467757 Warn user if Planned Ask Amount > $5M
+// Display the message once per day (not currently in use)
+// allow user to suppress the warning my checking the VP Notify box
+// alert("{!Opportunity.Last_Ask_Reminder_Date__c}");
+// alert({!Opportunity.VP_Notified_of_Ask__c});
+ if ("{!Opportunity.Planned_Ask_Amount__c}" > 4999999 && "{!Opportunity.VP_Notified_of_Ask__c}" == 'false')
+    alert("The Planned Ask Amount equals or exceeds $5,000,000. Please check with the office of the VP.");
+} 
+</script>
+</apex:page>

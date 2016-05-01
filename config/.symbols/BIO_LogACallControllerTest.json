@@ -1,0 +1,192 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "BIO_LogACallControllerTest", 
+    "tableDeclaration": {
+        "type": "BIO_LogACallControllerTest", 
+        "modifiers": [
+            "private", 
+            "testMethod"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 15, 
+            "line": 10
+        }, 
+        "name": "BIO_LogACallControllerTest"
+    }, 
+    "key": "01p63000000DAs9AAG", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 13
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 14
+            }, 
+            "name": "suidList"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 7, 
+                "line": 15
+            }, 
+            "name": "devRecordTypeId"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 17
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 24
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 30
+            }, 
+            "name": "conRecord"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 40
+            }, 
+            "name": "suid1"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 41
+            }, 
+            "name": "suid2"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 42
+            }, 
+            "name": "suid"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 43
+            }, 
+            "name": "pageRef"
+        }, 
+        {
+            "type": "BIO_LogACallController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 45
+            }, 
+            "name": "interactionLog"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 58
+            }, 
+            "name": "pageRef"
+        }, 
+        {
+            "type": "BIO_LogACallController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 60
+            }, 
+            "name": "interactionLog"
+        }
+    ], 
+    "id": "01p63000000DAs9AAG", 
+    "methods": [
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "testMethod"
+            ], 
+            "name": "bio_LogACallControllerTest", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 12
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "testMethod"
+            ], 
+            "name": "bio_LogACallControllerTestInvalidSuid", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 56
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

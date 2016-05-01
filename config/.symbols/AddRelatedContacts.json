@@ -1,0 +1,183 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "AddRelatedContacts", 
+    "tableDeclaration": {
+        "type": "AddRelatedContacts", 
+        "modifiers": [
+            "global"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "AddRelatedContacts"
+    }, 
+    "key": "01p63000000D9RRAA0", 
+    "variables": [
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 12
+            }, 
+            "name": "recordId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 74, 
+                "line": 12
+            }, 
+            "name": "objectName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 13
+            }, 
+            "name": "accountId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 51, 
+                "line": 13
+            }, 
+            "name": "firstContactId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 14
+            }, 
+            "name": "secondContactId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 15
+            }, 
+            "name": "firstContactAPIName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 16
+            }, 
+            "name": "secondContactAPIName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 17
+            }, 
+            "name": "errormsg"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 29
+            }, 
+            "name": "contactId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 31
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 50
+            }, 
+            "name": "sObj"
+        }
+    ], 
+    "id": "01p63000000D9RRAA0", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "webService", 
+                "global"
+            ], 
+            "name": "populateContactField", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "recordId"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "objectName"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "accountId"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "firstContactId"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "secondContactId"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "firstContactAPIName"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "secondContactAPIName"
+                }
+            ], 
+            "visibility": "GLOBAL", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 12
+            }, 
+            "returnType": "String", 
+            "type": null
+        }
+    ]
+}

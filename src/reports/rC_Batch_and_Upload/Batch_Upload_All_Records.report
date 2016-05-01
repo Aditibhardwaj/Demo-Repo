@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Batch_ID__c</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Batch_Number__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Giving_Amount__c</field>
+    </columns>
+    <description>A listing of all batch upload records</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Transaction_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Batch Upload: All Records</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rC_Connect__Batch_Upload__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Close_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

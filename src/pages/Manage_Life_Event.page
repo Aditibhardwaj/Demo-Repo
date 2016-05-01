@@ -1,0 +1,338 @@
+<apex:page standardController="Contact" extensions="Manage_Life_Event_Controller" >
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+ 
+ 
+ <div >
+      <div style="float: left;overflow: hidden;">
+          <apex:image id="theImage" value="/profilephoto/005/F" width="50" height="50"/>
+      </div>
+      <div  style="overflow: hidden;">
+          <apex:outputText value="{!Contact.FirstName}" style="font-size: x-large;" /> <br/>
+          <apex:outputText value="{!Contact.LastName}" style="font-size: x-large;"  />
+          
+      </div>
+  </div>
+  <apex:form >
+     <apex:pageMessages id="pageMessage"></apex:pageMessages>
+     <apex:actionFunction action="{!divorceSpouseDetails}" name="findContacts" rerender="maindetail"  immediate="true" /> 
+     <apex:actionFunction action="{!showerrorMessage}" name="checkPageMessage" immediate="true" rerender="pageMessage" />
+     <apex:actionFunction action="{!spouseDetailBeforeMarriage}" name="spouseDetailGet" immediate="true" rerender="test" /> 
+     
+         
+     
+   
+     
+     <apex:pageBlock mode="maindetail">
+         <apex:pageBlockSection columns="1" title="Manage Life Events" collapsible="false">
+         	<apex:pageBlockSectionItem >
+             	<apex:outputLabel value="Life Event" />
+                 <select id="lifeEventDropDown" onchange="picklistSelect();" style="width: 242px;">
+                     	<option value="">--None--</option>
+                        <option value="Marriage">Marriage</option>
+                        <option value="Divorce">Divorce</option>
+                        <option value="Decease">Decease</option>
+                </select>
+           </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem dataStyleClass="radioOptions">
+                   <apex:outputLabel value="Select Existing Contact"/> 
+                   <apex:outputPanel >
+                   		<input type="radio" name="radioName" value="existingContact" /> 
+                        <apex:outputPanel styleClass="existing-spouse-class">
+                   	  <apex:outputLabel value="Spouse: "/>
+                      <apex:actionRegion >
+                          <apex:inputField value="{!cont.ReportsToId}"  > 
+                              <apex:actionSupport action="{!fetchspouseDetails}" event="onselect" rerender="detailBlock" status="status"/>
+                          </apex:inputField>
+                      </apex:actionRegion>
+                   </apex:outputPanel>
+                   </apex:outputPanel>
+                   
+               </apex:pageBlockSectionItem>
+               
+                
+                   
+               
+               <apex:pageBlockSectionItem dataStyleClass="radioOptions">
+                 <apex:outputLabel value="Create New Contact"/> 
+                 <input type="radio" name="radioName" value="newContact"/> 
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+            
+         
+         <script>$('.radioOptions').parent().hide();</script> 
+         
+         
+         
+         
+         
+         
+     </apex:pageBlock>
+     
+     <div id="DateFieldMarriage" style="display:none;">
+         
+         <apex:pageBlock mode="maindetail">
+             <apex:pageBlockSection title="Life Event Details" collapsible="false">
+                 
+                <!-- <apex:pageBlockSectionItem >
+                     
+                     <apex:outputLabel value="Starting Month" />
+                     <apex:inputField value="{!startDateAndEndDate.rC_Bios__Starting_Month__c}" />
+                     
+                     
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                     
+                     <apex:outputLabel value="Starting Date" />
+                     <apex:inputField value="{!startDateAndEndDate.rC_Bios__Starting_Day__c}" />
+                     
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                     
+                     <apex:outputLabel value="Starting Year" />
+                     <apex:inputField value="{!startDateAndEndDate.rC_Bios__Starting_Year__c}" />
+                     
+                 </apex:pageBlockSectionItem> -->
+                 
+                 <apex:repeat value="{!$ObjectType.rC_Bios__Relationship__c.FieldSets.ADAPT_Life_Events_Marriage}" var="f">
+                     <apex:inputField value="{!marriageRelationship[f.fieldPath]}"   />
+                 </apex:repeat>
+                 
+                 
+                 
+                 
+                 
+             </apex:pageBlockSection>
+             
+         </apex:pageBlock>
+         
+     </div>
+     <div id="DateFieldDivorce" style="display:none;">
+         
+         <apex:pageBlock mode="maindetail">
+             <apex:pageBlockSection title="Life Event Details" collapsible="false">
+                 
+                <!-- <apex:pageBlockSectionItem >
+                     
+                     <apex:outputLabel value="Starting Month" />
+                     <apex:inputField value="{!startDateAndEndDate.rC_Bios__Starting_Month__c}" />
+                     
+                     
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                     
+                     <apex:outputLabel value="Starting Date" />
+                     <apex:inputField value="{!startDateAndEndDate.rC_Bios__Starting_Day__c}" />
+                     
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                     
+                     <apex:outputLabel value="Starting Year" />
+                     <apex:inputField value="{!startDateAndEndDate.rC_Bios__Starting_Year__c}" />
+                     value="{!$ObjectType.rC_Bios__Relationship__c.FieldSets.ADAPT_Life_Events_Divorce}"
+                 </apex:pageBlockSectionItem> -->
+                 
+                 <apex:repeat value="{!$ObjectType.rC_Bios__Relationship__c.FieldSets.ADAPT_Life_Events_Divorce}" var="f">
+                     <apex:inputField value="{!divorceRelationship[f.fieldPath]}"   />
+                 </apex:repeat>
+                 
+                 
+                 
+                 
+                 
+             </apex:pageBlockSection>
+             
+         </apex:pageBlock>
+         
+     </div>
+     
+ 
+ 
+    <div id="marrigePanel" style="display:none;" >
+            
+           <div id="inputPanel">
+                         <apex:pageblock mode="maindetail" id="newContactPanel">    
+                                  <apex:pageBlockSection title="Spouse Information" collapsible="false">
+                                    
+                                  <apex:repeat value="{!fields}" var="f">
+                                         <apex:inputField value="{!cont[f.fieldPath]}" rendered="{!IF(f.Label != 'Marital Status', true, false)}"  />
+                                         <apex:outputField value="{!cont[f.fieldPath]}" rendered="{!IF(f.Label == 'Marital Status', true, false)}" /> 
+                                  </apex:repeat>
+                              </apex:pageBlockSection>
+                                
+                          </apex:pageblock>
+                 
+                          <apex:commandButton action="{!saveOnClick}" status="status" value="Save" style="margin-left:40%" rerender="newContactPanel, pageMessage"/>
+                          <apex:commandButton action="{!cancelOnClick}" status="status" value="Cancel" immediate="true"/>
+                     
+                     
+                </div>        
+                <br/>
+
+                    
+                  <apex:outputPanel id="detailBlock" >
+                     
+                        <apex:pageBlock mode="maindetail" id="existingContactPanel">
+                          <apex:pageBlockSection columns="2" collapsible="false" title="Spouse Information">
+                              <apex:outputField value="{!detailContact.FirstName}" />
+                              <apex:outputField value="{!detailContact.LastName}" />
+                              <apex:outputField value="{!detailContact.SUID__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Work_Phone__c}" />
+                              <apex:outputField value="{!detailContact.Account.Name}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Work_Email__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Gender__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Active__c}" />
+                              <apex:outputField value="{!detailContact.rC_Bios__Marital_Status__c}" />
+                           </apex:pageBlockSection>    
+                       <apex:commandButton action="{!saveForExistingContact}" value="Save" status="status" style="margin-left:40%" rerender="existingContactPanel, pageMessage" immediate="true"/>
+                       <apex:commandButton action="{!cancelOnClick}" value="Cancel" immediate="true" status="status"/>
+                    </apex:pageBlock>
+                </apex:outputPanel>
+            
+            <div style="padding-bottom:2%"></div>
+      </div>
+      
+      <div id="divorcePanel" style="display:none">
+             <apex:pageBlock mode="maindetail">
+                 <apex:pageBlockSection columns="1">
+                     
+                     <b><apex:outputText value="{!contactWithRelatedObject.FirstName} {!contactWithRelatedObject.LastName} is married with {!nameOfSpouse}. Confirm Divorce?"  id="test" style="width:200%"/> </b>  
+                         
+                      
+                     
+                  <!--   <apex:pageBlockSectionItem>
+                         <apex:outputField value="{!detailContact.FirstName}" />
+                         <apex:outputField value="{!detailContact.LastName}" />
+                     </apex:pageBlockSectionItem> -->
+                 </apex:pageBlockSection>
+                
+                    <apex:pageBlockButtons location="bottom" >
+                        <apex:commandButton value="Yes" immediate="true" action="{!divorceSpouseDetails}"  />
+                        <apex:commandButton value="No" immediate="true"  />
+                     </apex:pageBlockButtons>    
+               
+            
+                
+            </apex:pageBlock>
+            
+      </div>
+                
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <apex:outputpanel >
+        <apex:actionstatus id="status">
+            <apex:facet name="start">
+                <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;
+                       height: 100%;opacity:0.65;width:100%;"> 
+                    <div class="waitingHolder" style="top: 74.2px; width: 91px;">
+                        <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                        <span class="waitingDescription">Loading...</span>
+                    </div>
+                </div>
+            </apex:facet>
+        </apex:actionstatus>
+    </apex:outputpanel>
+ </apex:form>
+ 
+ <script>
+     
+     
+        
+         $(document).ready(function () {
+     		$('#lifeEventDropDown').focus();
+             //$j('select[id$=inputPanel]').hide();
+             $('#marrigePanel').hide();   // inputPanel\
+             
+             
+             
+             
+             $('.radioOptions input').on('change', function() {
+                    	$('#marrigePanel').show();
+                        if($('input[name=radioName]:checked', '.radioOptions').val() == 'newContact'){
+                            $('.existing-spouse-class').hide(); 
+                            $('span[id$=detailBlock]').hide();
+                            $('#inputPanel').show();
+                            
+                        }else if($('input[name=radioName]:checked', '.radioOptions').val() == 'existingContact'){   
+                            $('.existing-spouse-class').show();                          
+                            $('span[id$=detailBlock]').show();
+                            $('#inputPanel').hide();
+                           
+                        }
+                 
+                       
+                    });
+             
+             
+             
+         });
+     
+     
+     
+     
+     function picklistSelect(){
+        
+        if($( "#lifeEventDropDown option:selected" ).text() == 'Marriage'){
+            if('{!alreadyMarried}' == 'true'){
+                 $('#DateFieldMarriage').hide();
+                 $('#DateFieldDivorce').hide();
+                 checkPageMessage();
+                 $('.radioOptions').parent().hide();
+                 
+             }else{
+                 $('.radioOptions').parent().show();
+                 $('#DateFieldMarriage').show();
+                 $('#DateFieldDivorce').hide();
+                 $('#marrigePanel').show();
+                 $("input[name=radioName][value=existingContact]").attr('checked', 'checked');
+                 $('#inputPanel').hide();
+                 $('span[id$=detailBlock]').show();
+                  $('#divorcePanel').hide();
+             }
+           
+        } else if($( "#lifeEventDropDown option:selected" ).text() == 'Divorce'){
+                spouseDetailGet();
+            if('{!alreadyMarried}' == 'false'){
+                $('#marrigePanel').hide();
+                $('#DateFieldMarriage').hide();
+                $('#DateFieldDivorce').hide();
+                $('.radioOptions').parent().hide();
+                $('#divorcePanel').hide();
+                checkPageMessage();
+            }else{
+                $('#marrigePanel').hide();
+                $('#DateFieldMarriage').hide();
+                $('#DateFieldDivorce').show();
+                $('.radioOptions').parent().hide();
+                $('#divorcePanel').show();
+            }    
+                
+                
+             
+             
+             
+             
+             
+        }else{
+             $('#marrigePanel').hide();   // inputPanel
+             $('.radioOptions').parent().hide();
+              $('#divorcePanel').hide();
+        }
+        
+        
+ }
+     
+ </script>
+ 
+ 
+ 
+ 
+</apex:page>

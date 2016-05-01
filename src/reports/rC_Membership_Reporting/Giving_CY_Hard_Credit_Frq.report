@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.rC_Giving__Current_Year_Hard_Credit_Count__c</field>
+    </columns>
+    <columns>
+        <field>Account.rC_Giving__Current_Year_Hard_Credit_Amount__c</field>
+    </columns>
+    <description>Shows all accounts with total hard credits from the current year</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Giving: CY Hard Credit (Frq)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.rC_Giving__Current_Year_Hard_Credit_Amount__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

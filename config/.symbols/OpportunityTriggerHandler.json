@@ -1,0 +1,108 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "devRecordTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 10
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "p", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 14
+            }, 
+            "type": "Profile"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "OpportunityTriggerHandler", 
+    "tableDeclaration": {
+        "type": "OpportunityTriggerHandler", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 9
+        }, 
+        "name": "OpportunityTriggerHandler"
+    }, 
+    "key": "01p63000000CxBgAAK", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 15
+            }, 
+            "name": "oppNewList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 16
+            }, 
+            "name": "oppName"
+        }, 
+        {
+            "type": "Opportunity", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 19
+            }, 
+            "name": "opp"
+        }
+    ], 
+    "id": "01p63000000CxBgAAK", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onBeforeInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "oppNewList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 15
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

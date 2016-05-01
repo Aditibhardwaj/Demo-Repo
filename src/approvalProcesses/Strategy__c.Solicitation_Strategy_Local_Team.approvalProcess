@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Parent_Strategy__c</field>
+        <field>Account__c</field>
+        <field>Prospect__c</field>
+        <field>Proposed_Ask_Range__c</field>
+        <field>Goal__c</field>
+        <field>Plan__c</field>
+        <field>Confidence__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Solicitation_Strategy_Approved</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>estamos@stanford.edu.dev1</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>hquinlan@stanford.edu.dev1</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>kbuhl@stanford.edu.dev1</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Send the record to the group of local team to unanimously approve</description>
+        <label>Local Team Approval</label>
+        <name>Local_Team_Approval</name>
+    </approvalStep>
+    <description>T-459059 Create Solicitation Strategy POC</description>
+    <emailTemplate>Approvals/Approval_Strategy_Approval_requested_TEAM</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Strategy__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Solicitation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Strategy__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Ready for Approval</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Solicitation_Strategy_Approved</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Strategy_Update_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Solicitation_Strategy_Declined</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Strategy_Update_Status_Declined</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Solicitation Strategy - Local Team</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

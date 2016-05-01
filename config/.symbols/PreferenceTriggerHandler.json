@@ -1,0 +1,763 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "CONSTITUENT_TYPE", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 9
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contactsToUpdate", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 10
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isPrimaryOnly", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 11
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contactHouseholdRecTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 12
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "accountOrganizationalRecTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 13
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "PreferenceTriggerHandler", 
+    "tableDeclaration": {
+        "type": "PreferenceTriggerHandler", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 6
+        }, 
+        "name": "PreferenceTriggerHandler"
+    }, 
+    "key": "01p63000000CfgbAAC", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 67, 
+                "line": 20
+            }, 
+            "name": "newPreferences"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 67, 
+                "line": 25
+            }, 
+            "name": "newPreferences"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 115, 
+                "line": 25
+            }, 
+            "name": "oldPreferenceMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 68, 
+                "line": 33
+            }, 
+            "name": "delPreference"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 114, 
+                "line": 33
+            }, 
+            "name": "oldMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 35
+            }, 
+            "name": "contIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 46, 
+                "line": 37
+            }, 
+            "name": "mapContPref"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 39
+            }, 
+            "name": "pref"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 47
+            }, 
+            "name": "Pref"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 56
+            }, 
+            "name": "cid"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 60
+            }, 
+            "name": "actualRecord"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 67, 
+                "line": 70
+            }, 
+            "name": "oldPreferences"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 72, 
+                "line": 74
+            }, 
+            "name": "newPreferences"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 120, 
+                "line": 74
+            }, 
+            "name": "oldPreferenceMap"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 146, 
+                "line": 74
+            }, 
+            "name": "isInsert"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 76
+            }, 
+            "name": "contactIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 77
+            }, 
+            "name": "accountContactMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 78
+            }, 
+            "name": "preferencesForUpdate"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 47, 
+                "line": 80
+            }, 
+            "name": "mapContactIdandPreferences"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 84
+            }, 
+            "name": "pre"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 98
+            }, 
+            "name": "accIds"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 99
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 103
+            }, 
+            "name": "accIdToContactMap"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 117
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 126
+            }, 
+            "name": "i"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 128
+            }, 
+            "name": "biosPreference"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 39, 
+                "line": 143
+            }, 
+            "name": "saveResults"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 76, 
+                "line": 148
+            }, 
+            "name": "accIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 149
+            }, 
+            "name": "accIdToContactMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 150
+            }, 
+            "name": "alums"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 151
+            }, 
+            "name": "biosCodes"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 153
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 173
+            }, 
+            "name": "primaryContact"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 86, 
+                "line": 173
+            }, 
+            "name": "secondaryContact"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 76, 
+                "line": 188
+            }, 
+            "name": "accIdToContactMap"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 189
+            }, 
+            "name": "accId"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 192
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 200
+            }, 
+            "name": "cnt1"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 201
+            }, 
+            "name": "cnt2"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 252
+            }, 
+            "name": "delPreference"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 253
+            }, 
+            "name": "oldMap"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 257
+            }, 
+            "name": "accountIdSet"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 260
+            }, 
+            "name": "pref"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 267
+            }, 
+            "name": "pref"
+        }, 
+        {
+            "type": "rC_Bios__Preference__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 271
+            }, 
+            "name": "actualRecord"
+        }
+    ], 
+    "id": "01p63000000CfgbAAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onAfterInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "newPreferences"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 20
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onAfterUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "newPreferences"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldPreferenceMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 25
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onBeforeDelete", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "delPreference"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 33
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "onAfterDelete", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "oldPreferences"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 70
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "calculateCTPrimary", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "newPreferences"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldPreferenceMap"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isInsert"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 74
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "getAccIdToContactMap", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "accIds"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 47, 
+                "line": 148
+            }, 
+            "returnType": "Map", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "setContactPrimaryOrSecondary", 
+            "parameters": [
+                {
+                    "type": "Contact", 
+                    "name": "primaryContact"
+                }, 
+                {
+                    "type": "Contact", 
+                    "name": "secondaryContact"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 173
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "updateHouseHoldContacts", 
+            "parameters": [
+                {
+                    "type": "Map", 
+                    "name": "accIdToContactMap"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 188
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "restrictDeletionOfCTFromOrgAccount", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "delPreference"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 251
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

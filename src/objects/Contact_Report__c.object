@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>T-476855</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>false</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>false</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Household or Organization</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contact Reports</relationshipLabel>
+        <relationshipName>Contact_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Author__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Author</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Contact Reports</relationshipLabel>
+        <relationshipName>Contact_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Complete</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact Reports (Contact2)</relationshipLabel>
+        <relationshipName>Contact_Reports1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>T-476861</description>
+        <externalId>false</externalId>
+        <label>Contact Date</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact Reports</relationshipLabel>
+        <relationshipName>Contact_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Executive_Summary__c</fullName>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Executive Summary</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Interested_In_Planned_Giving__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Interested In Planned Giving?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MCD_Comments_EN__c</fullName>
+        <description>Encrypted comments visible to MCD profile</description>
+        <externalId>false</externalId>
+        <label>MCD Comments (EN)</label>
+        <length>150</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>MCD_Notes__c</fullName>
+        <description>T-480587 POC for MCD FLS</description>
+        <externalId>false</externalId>
+        <label>MCD Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Narrative__c</fullName>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Narrative</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Prospect_Change_Request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Prospect Change Request?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_Relationship_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Prospect Relationship Change?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Purpose__c</fullName>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Purpose</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solicitation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General Information</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attorney for Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteer Cultivation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alumni Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Magazine Article/Interview</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reassign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Reassign?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Request_Research_Items__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Request Research Items?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Significant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Significant</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the descriptive subject of the interaction</inlineHelpText>
+        <label>Subject</label>
+        <length>144</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tone__c</fullName>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Tone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Neutral</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engaged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disappointed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>T-476856</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Publication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-person visit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other contact type (text, IM, etc.)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-person contact at a group event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Follow-up Planned Giving Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Final Planned Giving Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Planned Giving Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Interest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Volunteer Interest?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Contact Report</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Author__c</columns>
+        <columns>Significant__c</columns>
+        <columns>Complete__c</columns>
+        <columns>Executive_Summary__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Tone__c</columns>
+        <columns>Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Contact_Report__c.CR_OOD_User</value>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CR-{00000000}</displayFormat>
+        <label>Contact Report Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contact Reports</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CR_OOD_User</fullName>
+        <active>true</active>
+        <description>T-476860  Create CR Team Record type to allow for future security</description>
+        <label>CR OOD User</label>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Alumni Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attorney for Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine Article%2FInterview</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Cultivation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tone__c</picklist>
+            <values>
+                <fullName>Disappointed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neutral</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Planned Giving Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow-up Planned Giving Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-person contact at a group event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-person visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Planned Giving Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other contact type %28text%2C IM%2C etc%2E%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Publication</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Add_Related_Contact</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Related Contact</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var firstContactId=&apos;{!Contact_Report__c.ContactId__c}&apos;; 
+var accountId=&apos;{!Contact_Report__c.AccountId__c}&apos;; 
+var recordId= &apos;{!Contact_Report__c.Id}&apos;;
+var secondContactId = &apos;{!Contact_Report__c.Contact2Id__c}&apos;;
+
+var result = sforce.apex.execute(&quot;AddRelatedContacts&quot;,&quot;populateContactField&quot;,{recordId : recordId,objectName : &apos;Contact_Report__c&apos;,accountId: accountId,firstContactId: firstContactId,secondContactId : secondContactId,firstContactAPIName : &apos;Contact__c&apos;,secondContactAPIName : &apos;Contact2__c&apos;});
+
+if(result != &apos;&apos;){
+    alert(result);
+}else{
+window.parent.location.href = &quot;/&quot;+recordId;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Contact_Report</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create Contact Report</masterLabel>
+        <openType>sidebar</openType>
+        <page>SS_Contact_Reports</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Contact_Report</fullName>
+        <availability>online</availability>
+        <description>T-476861</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Contact Report</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var conId=&apos;{!Contact.Id}&apos;; 
+
+var result = sforce.apex.execute(&quot;URLGeneratorService&quot;, &quot;generateContactReportUrlForContact&quot;,{contactId : conId}); 
+
+window.parent.location.href = result;</url>
+    </webLinks>
+</CustomObject>

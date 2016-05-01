@@ -1,0 +1,26 @@
+{
+    "username": "ranjeet.singh1@appirio.com.stanford.dev", 
+    "project_name": "Stanford University", 
+    "org_url": "", 
+    "namespace": "", 
+    "metadata_container": "1dc630000004TlnAAE", 
+    "environment": "sandbox", 
+    "workspace": "D:\\Development\\MavensMateFinal WS", 
+    "id": "A4PMJO2OOFU7TK66IZEJQE87JL641G4T", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "ApprovalProcess", 
+        "CustomObject", 
+        "Flow", 
+        "Layout", 
+        "PermissionSet", 
+        "Profile", 
+        "Report", 
+        "ReportType", 
+        "StaticResource", 
+        "Workflow"
+    ]
+}

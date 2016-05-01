@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>This custom setting stores contact prefix and abbreviated prefix mapping</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Abbreviated_Prefix__c</fullName>
+        <description>This field stores the abbreviated value of prefix on contact</description>
+        <externalId>false</externalId>
+        <label>Abbreviated Prefix</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alternate_Prefix__c</fullName>
+        <externalId>false</externalId>
+        <label>Alternate Prefix</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Ind__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Default Ind</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Display_on_Web__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Display on Web</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Gender_Restriction__c</fullName>
+        <description>Stores gender restriction for prefix</description>
+        <externalId>false</externalId>
+        <label>Gender Restriction</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prefix__c</fullName>
+        <description>This Field stores the prefix value on contact</description>
+        <externalId>false</externalId>
+        <label>Prefix</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Contact Prefix Mapping</label>
+</CustomObject>

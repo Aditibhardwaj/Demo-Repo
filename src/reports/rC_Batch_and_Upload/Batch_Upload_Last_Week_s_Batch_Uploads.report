@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Batch_ID__c</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Batch_Number__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Giving_Amount__c</field>
+    </columns>
+    <description>a listing of batches uploaded in the previous week by status</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Batch Upload: Last Week&apos;s Batch Uploads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rC_Connect__Batch_Upload__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_LAST_UPDATE</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

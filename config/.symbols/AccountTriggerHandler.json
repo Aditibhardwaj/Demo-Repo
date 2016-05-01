@@ -1,0 +1,584 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isRecursiveForAfterInsert", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 10
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isRecursiveForAfterUpdate", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 11
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isRecursiveForBeforeUpdate", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 12
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isRecursiveForBeforeInsert", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 13
+            }, 
+            "type": "Boolean"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "AccountTriggerHandler", 
+    "tableDeclaration": {
+        "type": "AccountTriggerHandler", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "AccountTriggerHandler"
+    }, 
+    "key": "01p63000000Cjb1AAC", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 15
+            }, 
+            "name": "acclist"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 28
+            }, 
+            "name": "acclist"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 70, 
+                "line": 28
+            }, 
+            "name": "accountOldMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 29
+            }, 
+            "name": "accountList"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 38
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 49
+            }, 
+            "name": "acclist"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 60
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 61
+            }, 
+            "name": "acntList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 62
+            }, 
+            "name": "SalutationList"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 6, 
+                "line": 63
+            }, 
+            "name": "devRecordTypeId"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 66
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 75
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 89
+            }, 
+            "name": "acclist"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 66, 
+                "line": 89
+            }, 
+            "name": "oldMap"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 96
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 97
+            }, 
+            "name": "acntList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 98
+            }, 
+            "name": "SalutationList"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 6, 
+                "line": 99
+            }, 
+            "name": "devRecordTypeId"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 102
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 113
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 123
+            }, 
+            "name": "accList"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 66, 
+                "line": 123
+            }, 
+            "name": "isupdate"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 124
+            }, 
+            "name": "suidIdSet"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 125
+            }, 
+            "name": "isValid"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 126
+            }, 
+            "name": "suidSet"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 127
+            }, 
+            "name": "suidCountMap"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 129
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 144
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 165
+            }, 
+            "name": "suidSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 166
+            }, 
+            "name": "newAccList"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 167
+            }, 
+            "name": "isUpdate"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 168
+            }, 
+            "name": "accountList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 169
+            }, 
+            "name": "suidIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 170
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 189
+            }, 
+            "name": "acc"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 193
+            }, 
+            "name": "con"
+        }
+    ], 
+    "id": "01p63000000Cjb1AAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onBeforeInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "acclist"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 15
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onBeforeUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "acclist"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "accountOldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 28
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onAfterInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "acclist"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 49
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onAfterUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "acclist"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 89
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "validateSuidOnAccount", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "accList"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isupdate"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 123
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getAllSuidsForAccount", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "suidSet"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "newAccList"
+                }, 
+                {
+                    "type": "Boolean", 
+                    "name": "isUpdate"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 165
+            }, 
+            "returnType": "Set", 
+            "type": null
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_OPP_AMOUNT</field>
+    </columns>
+    <description>all payments uploaded today by payment method</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_OPP_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>Opportunity.rC_Giving__Transaction</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_OPP_STAGE_NAME</column>
+            <operator>equals</operator>
+            <value>Completed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Opportunity.rC_Giving__Payment_Method__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Batch Upload: Today&apos;s Payments by Method</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rC_Connect__Batch_Upload__c@rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Giving_Matched__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

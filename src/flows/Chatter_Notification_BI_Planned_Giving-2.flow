@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Chatter_Post_On_Account</name>
+        <label>Chatter Post On Account</label>
+        <locationX>59</locationX>
+        <locationY>191</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Check_If_Parent_Contact_Exist</targetReference>
+        </connector>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>accountId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>chatterMessageForAccount</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>FeedItem</assignToReference>
+            <name>feedItemId</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Chatter_Post_On_Contact</name>
+        <label>Chatter Post On Contact</label>
+        <locationX>308</locationX>
+        <locationY>196</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>contactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>chatterMessage</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>FeedItem</assignToReference>
+            <name>feedItemId</name>
+        </outputParameters>
+    </actionCalls>
+    <decisions>
+        <name>Check_If_Parent_Account_Exist</name>
+        <label>Check If Parent Account Exist</label>
+        <locationX>60</locationX>
+        <locationY>32</locationY>
+        <defaultConnector>
+            <targetReference>Check_If_Parent_Contact_Exist</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Account_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>accountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Chatter_Post_On_Account</targetReference>
+            </connector>
+            <label>Account Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_If_Parent_Contact_Exist</name>
+        <label>Check If Parent Contact Exist</label>
+        <locationX>320</locationX>
+        <locationY>29</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Contact_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>contactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Chatter_Post_On_Contact</targetReference>
+            </connector>
+            <label>Contact Exist</label>
+        </rules>
+    </decisions>
+    <description>This flow will post chatter notification on related account and contact</description>
+    <label>Chatter Notification BI Planned Giving</label>
+    <processType>AutoLaunchedFlow</processType>
+    <startElementReference>Check_If_Parent_Account_Exist</startElementReference>
+    <textTemplates>
+        <name>chatterMessage</name>
+        <text>A Bequest Intention has been entered for this contact</text>
+    </textTemplates>
+    <textTemplates>
+        <name>chatterMessageForAccount</name>
+        <text>A Bequest Intention has been entered for this account</text>
+    </textTemplates>
+    <variables>
+        <name>accountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>contactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>FeedItem</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

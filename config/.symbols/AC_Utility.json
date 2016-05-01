@@ -1,0 +1,102 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "AC_Utility", 
+    "tableDeclaration": {
+        "type": "AC_Utility", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "AC_Utility"
+    }, 
+    "key": "01p63000000D6RxAAK", 
+    "variables": [
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 12
+            }, 
+            "name": "fieldName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 76, 
+                "line": 12
+            }, 
+            "name": "objName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 14
+            }, 
+            "name": "query"
+        }, 
+        {
+            "type": "Decimal", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 19
+            }, 
+            "name": "maxAutoNumber"
+        }, 
+        {
+            "type": "SObject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 20
+            }, 
+            "name": "sObj"
+        }
+    ], 
+    "id": "01p63000000D6RxAAK", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "getMaxAutoNumberFieldValue", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "fieldName"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "objName"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 12
+            }, 
+            "returnType": "Decimal", 
+            "type": null
+        }
+    ]
+}

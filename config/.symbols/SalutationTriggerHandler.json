@@ -1,0 +1,691 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "accMap", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 13
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isRecursive", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 14
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isOverrideUpdatedToFalse", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 15
+            }, 
+            "type": "Boolean"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "SalutationTriggerHandler", 
+    "tableDeclaration": {
+        "type": "SalutationTriggerHandler", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 9
+        }, 
+        "name": "SalutationTriggerHandler"
+    }, 
+    "key": "01p63000000CkcyAAC", 
+    "variables": [
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 46, 
+                "line": 16
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 17
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 38
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 39
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 40
+            }, 
+            "name": "ConIdSet"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 41
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 42
+            }, 
+            "name": "accIdSet"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 45
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 52
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 80
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 46, 
+                "line": 81
+            }, 
+            "name": "OldSalMap"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 85
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 86
+            }, 
+            "name": "conListToUpdate"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 87
+            }, 
+            "name": "conIdSetToUpdate"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 88
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 121
+            }, 
+            "name": "oldSalutationList"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 127
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 128
+            }, 
+            "name": "conListToUpdate"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 129
+            }, 
+            "name": "conIdSetToUpdate"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 130
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 67, 
+                "line": 148
+            }, 
+            "name": "salList"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 6, 
+                "line": 149
+            }, 
+            "name": "devRecordTypeId"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 153
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 154
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 155
+            }, 
+            "name": "salListToUpdate"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 6, 
+                "line": 156
+            }, 
+            "name": "conId"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 159
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 175
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 182
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 70, 
+                "line": 190
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 191
+            }, 
+            "name": "OldSalMap"
+        }, 
+        {
+            "type": "SalutationUtility", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 193
+            }, 
+            "name": "util"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 194
+            }, 
+            "name": "conlist"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 195
+            }, 
+            "name": "conIdSet"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 196
+            }, 
+            "name": "accIdSet"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 197
+            }, 
+            "name": "contactList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 198
+            }, 
+            "name": "salutationListToUpdate"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 202
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 214
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 227
+            }, 
+            "name": "salutationResult"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 77, 
+                "line": 247
+            }, 
+            "name": "salutationList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 248
+            }, 
+            "name": "OldSalMap"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 249
+            }, 
+            "name": "salutationListToUpdate"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 252
+            }, 
+            "name": "SalIdSet"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 253
+            }, 
+            "name": "salutationToUpdate"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 254
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 297
+            }, 
+            "name": "salutationResult"
+        }
+    ], 
+    "id": "01p63000000CkcyAAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getContactList", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "conIdSet"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 16
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onAfterInsert", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "salutationList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 38
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onAfterUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "salutationList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "OldSalMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 80
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "onAfterDelete", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "oldSalutationList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 121
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "updateChildSalOnContact", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "salList"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 148
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "updateSalutationOnOverride", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "salutationList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "OldSalMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 190
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "calculateManualAndAutomaticUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "salutationList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "OldSalMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 247
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

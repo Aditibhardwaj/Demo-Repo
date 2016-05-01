@@ -1,0 +1,234 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [
+        {
+            "properties": [
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "subscriberId", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 16
+                    }, 
+                    "type": "String"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "teamMemberId", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 19, 
+                        "line": 19
+                    }, 
+                    "type": "String"
+                }, 
+                {
+                    "modifiers": [
+                        "public"
+                    ], 
+                    "name": "activeParentTeamList", 
+                    "visibility": "PUBLIC", 
+                    "references": [], 
+                    "location": {
+                        "column": 40, 
+                        "line": 22
+                    }, 
+                    "type": "LIST"
+                }
+            ], 
+            "externalReferences": [], 
+            "innerClasses": [], 
+            "interfaces": [], 
+            "constructors": [], 
+            "namespace": null, 
+            "name": "ActionRequest", 
+            "tableDeclaration": {
+                "type": "ActionRequest", 
+                "modifiers": [
+                    "global"
+                ], 
+                "references": [], 
+                "location": {
+                    "column": 16, 
+                    "line": 14
+                }, 
+                "name": "ActionRequest"
+            }, 
+            "key": null, 
+            "variables": [], 
+            "id": null, 
+            "methods": []
+        }
+    ], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "CheckSubscriberExistOnOtherTeam", 
+    "tableDeclaration": {
+        "type": "CheckSubscriberExistOnOtherTeam", 
+        "modifiers": [
+            "global"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 11
+        }, 
+        "name": "CheckSubscriberExistOnOtherTeam"
+    }, 
+    "key": "01p630000000QFvAAM", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 91, 
+                "line": 28
+            }, 
+            "name": "request"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 29
+            }, 
+            "name": "subscriberIdSet"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 30
+            }, 
+            "name": "teamMemberIdSet"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 31
+            }, 
+            "name": "teamIdSet"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 8, 
+                "line": 33
+            }, 
+            "name": "teamMemberRecTypeId"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 37
+            }, 
+            "name": "i"
+        }, 
+        {
+            "type": "rC_Education__Team__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 41
+            }, 
+            "name": "tm"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 46
+            }, 
+            "name": "teamMemberList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 44, 
+                "line": 48
+            }, 
+            "name": "mapSubIdToRCBios"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 53
+            }, 
+            "name": "relationList"
+        }, 
+        {
+            "type": "rC_Bios__Relationship__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 54
+            }, 
+            "name": "rcbios"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 70
+            }, 
+            "name": "i"
+        }
+    ], 
+    "id": "01p630000000QFvAAM", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "CheckSubscriber", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "request"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 28
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }
+    ]
+}

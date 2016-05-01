@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.rC_Bios__Preferred_Billing_Address__c</field>
+    </columns>
+    <columns>
+        <field>Account.rC_Bios__Preferred_Shipping_Address__c</field>
+    </columns>
+    <columns>
+        <field>Account.rC_Bios__Preferred_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Account.rC_Bios__Preferred_Contact_Email__c</field>
+    </columns>
+    <columns>
+        <field>Account.rC_Bios__Preferred_Contact_Phone__c</field>
+    </columns>
+    <description>Account had no preferred billing address</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.rC_Bios__Preferred_Shipping_Address__c</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>TYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>QC: No Preferred Billing Address</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,412 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "devRecordTypeId", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 11
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "acc", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 15
+            }, 
+            "type": "Account"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "cont", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 16
+            }, 
+            "type": "Contact"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "cont1", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 17
+            }, 
+            "type": "Contact"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "contactList", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 18
+            }, 
+            "type": "LIST"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "SalutationTriggerHandlerTest", 
+    "tableDeclaration": {
+        "type": "SalutationTriggerHandlerTest", 
+        "modifiers": [
+            "private", 
+            "testMethod"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 15, 
+            "line": 10
+        }, 
+        "name": "SalutationTriggerHandlerTest"
+    }, 
+    "key": "01p63000000Ckd8AAC", 
+    "variables": [
+        {
+            "type": "Contact_Prefix_Mapping__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 21
+            }, 
+            "name": "prefMapping"
+        }, 
+        {
+            "type": "Contact_Prefix_Mapping__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 26
+            }, 
+            "name": "prefMapping1"
+        }, 
+        {
+            "type": "Contact_Prefix_Mapping__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 31
+            }, 
+            "name": "prefMapping2"
+        }, 
+        {
+            "type": "Contact_Prefix_Mapping__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 36
+            }, 
+            "name": "prefMapping3"
+        }, 
+        {
+            "type": "Contact_Prefix_Mapping__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 40
+            }, 
+            "name": "prefMapping4"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 47
+            }, 
+            "name": "accList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 74
+            }, 
+            "name": "accList"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 75
+            }, 
+            "name": "acc0"
+        }, 
+        {
+            "type": "Account", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 76
+            }, 
+            "name": "acc1"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 82
+            }, 
+            "name": "conList"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 83
+            }, 
+            "name": "con0"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 89
+            }, 
+            "name": "con1"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 99
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 108
+            }, 
+            "name": "sal1"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 141
+            }, 
+            "name": "salList"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 143
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 149
+            }, 
+            "name": "sal1"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 166
+            }, 
+            "name": "updatedSal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 179
+            }, 
+            "name": "salList1"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 181
+            }, 
+            "name": "sal"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 189
+            }, 
+            "name": "sal1"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 210
+            }, 
+            "name": "updatedSal"
+        }, 
+        {
+            "type": "rC_Bios__Salutation__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 215
+            }, 
+            "name": "updatedSal1"
+        }
+    ], 
+    "id": "01p63000000Ckd8AAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "createPrefixData", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 20
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "createTestData", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 45
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "testMethod"
+            ], 
+            "name": "updatechildOnContactTest", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 72
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "testMethod"
+            ], 
+            "name": "updateSalutationOnOverrideTest", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 137
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "testMethod"
+            ], 
+            "name": "calculateManualAndAutomaticUpdateTest", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 175
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

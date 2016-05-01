@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rC_Education__Team__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Education__User__c</field>
+    </columns>
+    <columns>
+        <field>rC_Education__Team__c.rC_Education__Team_Members__r$rC_Bios__Role_1__c</field>
+    </columns>
+    <description>T-476310 Show all shared account and specific contact teams for this contact. 
+Report link placed on contact detail.</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>rC_Education__Team__c$rC_Education__Account__c.Id</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>rC_Education__Team__c$rC_Education__Contact__c.Id</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Education__Team__c$rC_Education__Active__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rC_Education__Team__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contact Teams (Dynamic)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Teams_and_Team_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>rC_Education__Team__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

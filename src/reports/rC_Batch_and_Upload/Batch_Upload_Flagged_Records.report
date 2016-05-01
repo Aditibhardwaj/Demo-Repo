@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Transaction_Type__c</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Giving_Amount__c</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Flagged_Reason__c</field>
+    </columns>
+    <columns>
+        <field>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Flagged_Technical_Reason__c</field>
+    </columns>
+    <description>pulls all flagged batch detail records grouped by create date</description>
+    <filter>
+        <criteriaItems>
+            <column>rC_Connect__Batch_Upload__c.rC_Connect__Batch_Upload_Status__c</column>
+            <operator>equals</operator>
+            <value>Flagged</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Batch Upload: Flagged Records</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rC_Connect__Batch_Upload__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>rC_Connect__Batch_Upload__c.rC_Connect__Giving_Close_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,91 @@
+<apex:page controller="BIO_LogACallController" tabStyle="Task" showHeader="true" sidebar="true">
+<style>
+  h3{
+    color: black;
+  }
+</style>
+<script>
+function reminderOnOff(dt){
+        document.getElementById(dt).disabled = !document.getElementById(dt).disabled;
+    }
+</script>
+ <apex:sectionHeader title="Log A Call" />
+ <apex:form >
+
+    <apex:pageBlock title="Task Edit" id="thePageBlock" tabStyle="Task">
+        
+         <apex:pageMessages />    
+        <apex:pageBlockButtons >
+            
+            <apex:commandButton value="Save" action="{!onSave}" reRender="thePageBlock" status="status"/>
+            <apex:commandButton value="Cancel" action="{!onCancel}" immediate="true" status="status"/>
+        </apex:pageBlockButtons>
+      
+         <apex:outputPanel id="updateable">
+         <apex:pageBlockSection title="Task Information" columns="2" collapsible="false">
+           <apex:inputField value="{!sobjTask.OwnerId}"/> 
+           <apex:inputField value="{!sobjTask.whatId}"/> 
+           <apex:inputField style="width:230px;" value="{!sobjTask.subject}" required="true" />                      
+            <apex:inputTextarea label="Contact SUIDs" value="{!contactSuid}" id="contactSuid"/>
+           <apex:inputField value="{!sobjTask.ActivityDate}"/>
+           <apex:outputPanel ></apex:outputPanel>
+           <apex:inputField style="height:100px;width:350px;" value="{!sobjTask.description}"/> 
+          
+                                                                 
+         </apex:pageBlockSection>
+              
+         <apex:pageBlockSection title="Additional Information" columns="1" collapsible="false">
+         <apex:outputField value="{!sobjTask.Status}"/>     
+         <!--<apex:outputField value="{!task.Phone}"/>  -->
+          <!--<apex:outputField value="{!task.Email}"/> -->                                
+           <!--<br/><apex:outputText value="{!statusMessage}" />    -->                                  
+         </apex:pageBlockSection>
+         <apex:pageBlockSection title="Schedule follow-up task" columns="1" collapsible="false" >
+         <apex:inputField value="{!sobjTask.whatId}"/>                                       
+           <!--<br/><apex:outputText value="{!statusMessage}" />    -->                                  
+         </apex:pageBlockSection>
+          <apex:pageBlockSection title="Task Information" columns="1" collapsible="false">
+         <apex:inputField value="{!sobjTask.OwnerId}"/> 
+           <apex:inputField style="width:230px;" value="{!sobjTask.subject}" required="true" />                      
+           
+           <apex:inputField value="{!sobjTask.ActivityDate}"/>
+           <apex:inputField style="height:100px;width:350px;" value="{!sobjTask.description}"/>                                
+         </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Additional Information" columns="1" collapsible="false">
+         <apex:inputField value="{!sobjTask.status}"/> 
+         <apex:inputField value="{!sobjTask.Priority}"/>                                       
+           <!--<br/><apex:outputText value="{!statusMessage}" />    -->                                  
+         </apex:pageBlockSection>
+          
+         
+          </apex:outputPanel> 
+          <apex:pageBlockSection title="Reminder" collapsible="false" columns="1">
+            <apex:pageBlockSectionItem >
+              <apex:outputLabel value="Reminder" for="fReminder"></apex:outputLabel>  
+              <apex:outputPanel id="fReminder">
+                  <apex:inputField value="{!sobjTask.IsReminderSet}" onChange="reminderOnOff('{!$Component.fRDT}');"/>
+                  <apex:inputField value="{!sobjTask.ReminderDateTime}" id="fRDT"/>  
+              </apex:outputPanel>
+              
+           </apex:pageBlockSectionItem>
+        
+        </apex:pageBlockSection>            
+        </apex:pageBlock>
+    </apex:form>
+<apex:outputpanel >
+     <apex:actionstatus id="status">
+       <apex:facet name="start">
+         <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;
+           height: 100%;opacity:0.65;width:100%;">
+           <div class="waitingHolder" style="top: 100px; width: 100px;">
+             <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+             <span class="waitingDescription">Please Wait...</span>
+           </div>
+         </div>
+       </apex:facet>
+     </apex:actionstatus>
+   </apex:outputpanel>
+
+
+</apex:page>

@@ -1,0 +1,127 @@
+{
+    "properties": [], 
+    "externalReferences": [
+        {
+            "references": [
+                {
+                    "column": 27, 
+                    "line": 9
+                }
+            ], 
+            "variables": [], 
+            "namespace": null, 
+            "methods": [
+                {
+                    "returnType": null, 
+                    "references": [
+                        {
+                            "column": 49, 
+                            "line": 9
+                        }
+                    ], 
+                    "name": "getNextSUID", 
+                    "parameters": [], 
+                    "argTypes": []
+                }
+            ], 
+            "name": "SUID_GeneratorService"
+        }
+    ], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "SUID_GeneratorServiceContact", 
+    "tableDeclaration": {
+        "type": "SUID_GeneratorServiceContact", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "SUID_GeneratorServiceContact"
+    }, 
+    "key": "01p63000000D4XPAA0", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 62, 
+                    "line": 6
+                }
+            ], 
+            "location": {
+                "column": 53, 
+                "line": 3
+            }, 
+            "name": "contactIds"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 27, 
+                    "line": 8
+                }, 
+                {
+                    "column": 16, 
+                    "line": 11
+                }
+            ], 
+            "location": {
+                "column": 23, 
+                "line": 4
+            }, 
+            "name": "contactNeedToBeUpdated"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [
+                {
+                    "column": 13, 
+                    "line": 9
+                }, 
+                {
+                    "column": 61, 
+                    "line": 9
+                }
+            ], 
+            "location": {
+                "column": 21, 
+                "line": 8
+            }, 
+            "name": "con"
+        }
+    ], 
+    "id": "01p63000000D4XPAA0", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "updateSUIDonContact", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "contactIds"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 3
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.rC_Volunteers__FullName__c</field>
+    </columns>
+    <columns>
+        <field>ROLE</field>
+    </columns>
+    <description>T-474005</description>
+    <format>Tabular</format>
+    <name>Stanford ADAPT Giving with Contact</name>
+    <params>
+        <name>include</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityContact@Opportunity.Strategy__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<apex:page >
+  <apex:pageMessages />
+  <apex:form >
+  <apex:commandButton value="back" action="{!Cancel}"/>
+  </apex:form>
+</apex:page>
